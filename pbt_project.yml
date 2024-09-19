@@ -305,6 +305,18 @@ sqlSnapshots:
       - name: c_date
         dataType:
           type: Date
+      - name: dbt_scd_id
+        dataType:
+          type: String
+      - name: dbt_updated_at
+        dataType:
+          type: Date
+      - name: dbt_valid_from
+        dataType:
+          type: Date
+      - name: dbt_valid_to
+        dataType:
+          type: Date
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
