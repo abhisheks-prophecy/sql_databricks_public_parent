@@ -305,6 +305,9 @@ sqlSnapshots:
       - name: c_date
         dataType:
           type: Date
+      - name: c_unique
+        dataType:
+          type: Bigint
       - name: dbt_scd_id
         dataType:
           type: String
