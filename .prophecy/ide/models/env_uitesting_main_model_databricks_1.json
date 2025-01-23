@@ -1354,8 +1354,8 @@
       "metadata" : {
         "label" : "SetOperation_1",
         "slug" : "SetOperation_1",
-        "x" : 920,
-        "y" : 440,
+        "x" : 800,
+        "y" : 300,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
