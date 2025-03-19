@@ -13,17 +13,21 @@ gemContainer:
   languageVersion: ''
   gemLibsVersion: ''
   gems: {}
+  dependencies: null
 functions:
   author: null
   createdAt: '2023-04-15 08:21:42'
   udfs: {}
   udafs: {}
   expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
 subgraphs: {}
 sqlModels:
   .prophecy/metadata/sqlmodels/env_uitesting_can_corrupt:
     name: env_uitesting_can_corrupt
     schema:
+      entityType: ''
       providerType: Databricks
       fields:
       - name: p_int
@@ -60,7 +64,7 @@ sqlModels:
             type: String
       - name: c_double
         dataType:
-          type: Float
+          type: Double
       - name: c_struct
         dataType:
           type: Struct
@@ -94,10 +98,14 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
     createdAt: '2023-06-20 09:19:31'
   .prophecy/metadata/sqlmodels/env_uitesting_main_model_databricks_1:
     name: env_uitesting_main_model_databricks_1
     schema:
+      entityType: ''
       providerType: Databricks
       fields:
       - name: p_int
@@ -134,7 +142,7 @@ sqlModels:
             type: String
       - name: c_double
         dataType:
-          type: Float
+          type: Double
       - name: c_struct
         dataType:
           type: Struct
@@ -159,7 +167,12 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
     createdAt: '2023-04-15 08:40:36'
+sqlSnapshots: {}
+sqlTests: {}
 sqlMacros:
   .prophecy/metadata/sqlmacros/default__language_specific_deduplicate:
     name: default__language_specific_deduplicate
@@ -389,6 +402,7 @@ sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_orders:
     name: raw_orders
     schema:
+      entityType: ''
       providerType: Databricks
       fields:
       - name: id
@@ -411,6 +425,7 @@ sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_payments:
     name: raw_payments
     schema:
+      entityType: ''
       providerType: Databricks
       fields:
       - name: id
@@ -449,6 +464,7 @@ sqlSources:
     tables:
     - name: all_type_non_partitioned
       schema:
+        entityType: ''
         providerType: databricks
         fields:
         - name: c_tinyint
@@ -498,6 +514,7 @@ sqlSources:
       createdAt: '2023-04-15 08:50:11'
     - name: all_type_partitioned
       schema:
+        entityType: ''
         providerType: databricks
         fields:
         - name: c_tinyint
@@ -552,6 +569,8 @@ sqlSources:
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2023-04-15 08:50:11'
 sqlUnreferencedSources: {}
+sqlOrchestratorPipelines: {}
+sqlBusinessApps: {}
 sqlPipeline:
   name: sqlPipeline
   description: null
@@ -559,4 +578,6 @@ sqlPipeline:
   createdAt: '2023-04-15 08:21:42'
 dependencies: '[]'
 projectDependencies: {}
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}
