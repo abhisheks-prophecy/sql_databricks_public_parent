@@ -137,7 +137,7 @@
   "processes" : {
     "snapshot_parent_main##zPnsAi5g" : {
       "id" : "snapshot_parent_main##zPnsAi5g",
-      "component" : "TargetSnapshot",
+      "component" : "TargetModel",
       "metadata" : {
         "label" : "snapshot_parent_main",
         "x" : 20,
@@ -152,6 +152,7 @@
         "customQuery" : false,
         "incrementalEditorDisabled" : true,
         "query" : "SELECT * \n\nFROM Reformat_1\n",
+        "isModel" : false,
         "incrementalKey" : false,
         "incremental" : {
           "expression" : "true"
