@@ -101,7 +101,61 @@ subgraphs: {}
 sqlModels:
   .prophecy/metadata/sqlmodels/env_uitesting_main_model_databricks_1:
     name: env_uitesting_main_model_databricks_1
-    schema: null
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: p_int
+        dataType:
+          type: Integer
+      - name: p_string
+        dataType:
+          type: String
+      - name: c_string
+        dataType:
+          type: String
+      - name: c_int
+        dataType:
+          type: Integer
+      - name: c_bigint
+        dataType:
+          type: Double
+      - name: c_smallint
+        dataType:
+          type: SmallInt
+      - name: c_tinyint
+        dataType:
+          type: TinyInt
+      - name: c_float
+        dataType:
+          type: Float
+      - name: c_boolean
+        dataType:
+          type: Boolean
+      - name: c_array
+        dataType:
+          type: Array
+          dataType:
+            type: String
+      - name: c_double
+        dataType:
+          type: Double
+      - name: c_struct
+        dataType:
+          type: Struct
+          fields:
+          - name: city
+            dataType:
+              type: String
+          - name: state
+            dataType:
+              type: String
+          - name: pin
+            dataType:
+              type: Bigint
+      - name: c_id
+        dataType:
+          type: Integer
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -117,12 +171,76 @@ sqlModels:
     createdAt: '2023-04-15 08:40:36'
   .prophecy/metadata/sqlmodels/env_uitesting_main_model_databricks_2:
     name: env_uitesting_main_model_databricks_2
-    schema: null
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: c_tinyint
+        dataType:
+          type: TinyInt
+      - name: c_smallint
+        dataType:
+          type: SmallInt
+      - name: c_int
+        dataType:
+          type: Integer
+      - name: c_bigint
+        dataType:
+          type: Bigint
+      - name: c_float
+        dataType:
+          type: Float
+      - name: c_double
+        dataType:
+          type: Double
+      - name: c_string
+        dataType:
+          type: String
+      - name: c_boolean
+        dataType:
+          type: Boolean
+      - name: c_array
+        dataType:
+          type: Array
+          dataType:
+            type: String
+      - name: c_struct
+        dataType:
+          type: Struct
+          fields:
+          - name: city
+            dataType:
+              type: String
+          - name: state
+            dataType:
+              type: String
+          - name: pin
+            dataType:
+              type: Bigint
+      - name: p_int
+        dataType:
+          type: Integer
+      - name: p_string
+        dataType:
+          type: String
+      - name: id
+        dataType:
+          type: Integer
+      - name: user_id
+        dataType:
+          type: Integer
+      - name: order_date
+        dataType:
+          type: Date
+      - name: status
+        dataType:
+          type: String
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
     - models/other_models/env_uitesting_main_model_databricks_2.sql
     - .prophecy/ide/models/env_uitesting_main_model_databricks_2.json
+    - models/other_models/schema.yml
     sqlDependencies:
       models: []
       datasets: []
@@ -133,7 +251,76 @@ sqlModels:
 sqlSnapshots:
   .prophecy/metadata/sqlsnapshots/snapshot_parent_main:
     name: snapshot_parent_main
-    schema: null
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: c_tinyint
+        dataType:
+          type: TinyInt
+      - name: c_smallint
+        dataType:
+          type: SmallInt
+      - name: c_int
+        dataType:
+          type: Integer
+      - name: c_bigint
+        dataType:
+          type: Bigint
+      - name: c_float
+        dataType:
+          type: Float
+      - name: c_double
+        dataType:
+          type: Double
+      - name: c_string
+        dataType:
+          type: String
+      - name: c_boolean
+        dataType:
+          type: Boolean
+      - name: c_array
+        dataType:
+          type: Array
+          dataType:
+            type: String
+      - name: c_struct
+        dataType:
+          type: Struct
+          fields:
+          - name: city
+            dataType:
+              type: String
+          - name: state
+            dataType:
+              type: String
+          - name: pin
+            dataType:
+              type: Bigint
+      - name: p_int
+        dataType:
+          type: Integer
+      - name: p_string
+        dataType:
+          type: String
+      - name: c_date
+        dataType:
+          type: Date
+      - name: c_unique
+        dataType:
+          type: Bigint
+      - name: dbt_scd_id
+        dataType:
+          type: String
+      - name: dbt_updated_at
+        dataType:
+          type: Date
+      - name: dbt_valid_from
+        dataType:
+          type: Date
+      - name: dbt_valid_to
+        dataType:
+          type: Date
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -676,20 +863,6 @@ sqlSources:
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2023-04-15 08:50:11'
 sqlUnreferencedSources: {}
-sqlOrchestratorPipelines:
-  .prophecy/metadata/sqlorchestratorpipeline/sanity_parent_orchestration_pipeline_1:
-    name: sanity_parent_orchestration_pipeline_1
-    schema: null
-    description: null
-    author: abhisheks+e2etests@prophecy.io
-    files:
-    - models/sanity_parent_orchestration_pipeline_1/model_sanity_parent_orchestration_pipeline_1_SQLStatement_1.sql
-    - models/sanity_parent_orchestration_pipeline_1/model_sanity_parent_orchestration_pipeline_1_Join_1.sql
-    - models/sanity_parent_orchestration_pipeline_1/schema.yml
-    - .prophecy/ide/pipelines/sanity_parent_orchestration_pipeline_1.json
-    - pipelines/sanity_parent_orchestration_pipeline_1.py
-    createdAt: '2025-03-17 06:33:23'
-sqlBusinessApps: {}
 sqlPipeline:
   name: sqlPipeline
   description: null
@@ -716,3 +889,17 @@ projectDependencies:
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}
+sqlOrchestratorPipelines:
+  .prophecy/metadata/sqlorchestratorpipeline/sanity_parent_orchestration_pipeline_1:
+    name: sanity_parent_orchestration_pipeline_1
+    schema: null
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - models/sanity_parent_orchestration_pipeline_1/model_sanity_parent_orchestration_pipeline_1_SQLStatement_1.sql
+    - models/sanity_parent_orchestration_pipeline_1/model_sanity_parent_orchestration_pipeline_1_Join_1.sql
+    - models/sanity_parent_orchestration_pipeline_1/schema.yml
+    - .prophecy/ide/pipelines/sanity_parent_orchestration_pipeline_1.json
+    - pipelines/sanity_parent_orchestration_pipeline_1.py
+    createdAt: '2025-03-17 06:33:23'
+sqlBusinessApps: {}

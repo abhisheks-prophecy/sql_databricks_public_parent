@@ -1590,13 +1590,14 @@
       "component" : "Email",
       "metadata" : {
         "label" : "send_danger_email",
-        "x" : 1440,
+        "x" : 1540,
         "y" : 180
       },
       "properties" : {
         "body" : "This is a dangerous email from sanity pipeline for parent databricks project",
         "subject" : "This is a dangerous email from sanity pipeline for parent databricks project",
         "includeData" : true,
+        "fileName" : "sanity_parent_sql_databricks",
         "to" : [ "abhisheks@prophecy.io" ],
         "bcc" : [ "abhisheks+bcc@prophecy.io" ],
         "cc" : [ "abhisheks+cc@prophecy.io" ],
@@ -1606,7 +1607,8 @@
             "id" : "smtp"
           },
           "type" : "connector"
-        }
+        },
+        "fileFormat" : "xlsx"
       },
       "ports" : {
         "inputs" : [ {

@@ -85,10 +85,12 @@ with DAG():
         body = "This is a dangerous email from sanity pipeline for parent databricks project", 
         subject = "This is a dangerous email from sanity pipeline for parent databricks project", 
         includeData = True, 
+        fileName = "sanity_parent_sql_databricks", 
         to = ["abhisheks@prophecy.io"], 
         bcc = ["abhisheks+bcc@prophecy.io"], 
         cc = ["abhisheks+cc@prophecy.io"], 
-        connection = Connection(kind = "smtp", id = "smtp")
+        connection = Connection(kind = "smtp", id = "smtp"), 
+        fileFormat = "xlsx"
     )
     S3Source_1.out0 >> S3Source_1.input_port_0_1
     (

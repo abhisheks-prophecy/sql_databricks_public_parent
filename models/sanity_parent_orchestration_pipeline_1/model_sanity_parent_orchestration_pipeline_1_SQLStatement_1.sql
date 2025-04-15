@@ -73,7 +73,7 @@ SetOperation_1 AS (
   
   SELECT * 
   
-  FROM `` AS in1
+  FROM Aggregate_1 AS in1
 
 ),
 
