@@ -898,6 +898,7 @@ projectDependencies:
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}
+projectConfigurations: {}
 sqlOrchestratorPipelines:
   .prophecy/metadata/sqlorchestratorpipeline/sanity_parent_orchestration_pipeline_1:
     name: sanity_parent_orchestration_pipeline_1
