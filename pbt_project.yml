@@ -815,7 +815,6 @@ sqlSources:
       description: null
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2023-04-15 08:50:11'
-      tableType: table
     - name: all_type_partitioned
       schema:
         entityType: ''

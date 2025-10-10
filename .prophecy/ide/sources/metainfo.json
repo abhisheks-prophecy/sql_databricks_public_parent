@@ -82145,11 +82145,6 @@
     "dependencies" : { },
     "prophecyProjectDependencies" : {
       "https://github.com/prophecy-io/prophecy-basics" : "64560"
-    },
-    "dependenciesMetadata" : {
-      "https://github.com/prophecy-io/prophecy-basics" : {
-        "autoUpgrade" : true
-      }
     }
   },
   "entitiesToSync" : [ {
