@@ -51,6 +51,7 @@ sources:
         - name: "pin"
           dataType:
             type: "Bigint"
+    type: "table"
   - name: "all_type_partitioned"
     columns:
     - name: "c_tinyint"
