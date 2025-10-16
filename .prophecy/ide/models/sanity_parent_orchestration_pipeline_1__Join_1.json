@@ -10,8 +10,8 @@
     "graphConfig" : {
       "entityConfig" : {
         "materialized" : "ephemeral",
-        "database" : "\"hive_metastore\"",
-        "schema" : "\"qa_db_warehouse\"",
+        "database" : "\"qa_team\"",
+        "schema" : "\"qa_orchestration\"",
         "type" : "ModelConfig"
       }
     },
@@ -39,7 +39,28 @@
         } ],
         "outputs" : [ {
           "id" : "output_port_0",
-          "slug" : "output_port_0"
+          "slug" : "output_port_0",
+          "dataExplorerProps" : {
+            "sorts" : [ ],
+            "filter" : {
+              "type" : "Composite",
+              "op" : {
+                "type" : "AND"
+              },
+              "filters" : [ {
+                "lhs" : {
+                  "type" : "Field",
+                  "value" : "Variable_category"
+                },
+                "type" : "Binary",
+                "op" : "=",
+                "rhs" : {
+                  "type" : "Literal",
+                  "value" : "'Financial performance'"
+                }
+              } ]
+            }
+          }
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
