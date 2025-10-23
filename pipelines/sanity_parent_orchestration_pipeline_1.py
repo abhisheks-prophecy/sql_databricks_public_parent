@@ -1,4 +1,14 @@
 with DAG():
+    S3Source_1 = Task(
+        task_id = "S3Source_1", 
+        component = "Dataset", 
+        table = {
+          "name": "prophecy_tmp__mh053wpt__sanity_parent_orchestration_pipeline_1__S3Source_1", 
+          "sourceType": "Source", 
+          "sourceName": "prophecy_tmp_source__sanity_parent_orchestration_pipeline_1", 
+          "alias": ""
+        }
+    )
     model_sanity_parent_orchestration_pipeline_1_Join_1 = Task(
         task_id = "model_sanity_parent_orchestration_pipeline_1_Join_1", 
         component = "Model", 
@@ -76,16 +86,6 @@ with DAG():
         cc = ["abhisheks+cc@prophecy.io"], 
         connection = Connection(kind = "smtp", id = "smtp"), 
         fileFormat = "xlsx"
-    )
-    S3Source_1 = Task(
-        task_id = "S3Source_1", 
-        component = "Dataset", 
-        table = {
-          "name": "prophecy_tmp__mgqeahqd__sanity_parent_orchestration_pipeline_1__S3Source_1", 
-          "sourceType": "Source", 
-          "sourceName": "prophecy_tmp_source__sanity_parent_orchestration_pipeline_1", 
-          "alias": ""
-        }
     )
     S3Source_1.out0 >> S3Source_1.input_port_0_1
     env_uitesting_main_model_databricks_1_1.out >> model_sanity_parent_orchestration_pipeline_1_Join_1.in_0
