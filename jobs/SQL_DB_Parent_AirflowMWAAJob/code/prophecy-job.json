@@ -11,7 +11,8 @@
       "emails" : "",
       "onStart" : false,
       "onSuccess" : false,
-      "onFailure" : false
+      "onFailure" : false,
+      "onDurationWarningThresholdExceeded" : false
     },
     "maxConcurrentRuns" : 1,
     "processDefaultSettings" : {
@@ -35,7 +36,8 @@
       "databricks" : false,
       "dataproc" : false,
       "emr" : false,
-      "onprem" : false
+      "onprem" : false,
+      "emr_serverless" : false
     }
   },
   "processes" : {
@@ -62,7 +64,7 @@
         "retries" : 0
       },
       "properties" : {
-        "entityId" : "66/.prophecy/metadata/sqlmodels/env_uitesting_main_model_databricks_1",
+        "entityId" : null,
         "cacheSelectedOnly" : null,
         "gitSubPath" : null,
         "runModelWithParents" : true,
@@ -97,7 +99,7 @@
         "select" : null,
         "recordTimingInfo" : null,
         "fullRefresh" : null,
-        "entityName" : "env_uitesting_main_model_databricks_1",
+        "entityName" : null,
         "noCacheSelectedOnly" : null,
         "noFavorState" : null,
         "snapshot" : null,

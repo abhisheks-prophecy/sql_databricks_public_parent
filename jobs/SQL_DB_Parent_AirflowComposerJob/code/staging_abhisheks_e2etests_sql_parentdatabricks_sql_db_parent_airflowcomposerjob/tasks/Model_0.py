@@ -20,16 +20,17 @@ def Model_0():
           "run_tests": True,
           "run_mode": "project",
           "entity_kind": "model",
-          "entity_name": "env_uitesting_main_model_databricks_1",
+          "entity_name": None,
           "project_id": "66",
           "git_entity": "branch",
           "git_entity_value": "dev_staging",
-          "git_ssh_url": "https://github.com/abhisheks-prophecy/sql_databricks_public_parent",
+          "git_ssh_url": "",
           "git_sub_path": "",
           "select": "",
+          "threads": "",
           "exclude": "",
-          "run_props": " --profile run_profile",
-          "envs": {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy", "DBT_PROFILES_DIR" : "/home/airflow/gcs/data"}
+          "run_props": "",
+          "envs": {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy"}
         },
         retries = 0
     )

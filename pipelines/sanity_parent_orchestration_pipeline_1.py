@@ -2,17 +2,16 @@ with DAG():
     S3Source_1 = Task(
         task_id = "S3Source_1", 
         component = "Dataset", 
+        label = "S3Source_1", 
         table = {
-          "name": "prophecy_tmp__mh053wpt__sanity_parent_orchestration_pipeline_1__S3Source_1", 
-          "sourceType": "Source", 
-          "sourceName": "prophecy_tmp_source__sanity_parent_orchestration_pipeline_1", 
-          "alias": ""
+          "name": "{{ prophecy_tmp_source('sanity_parent_orchestration_pipeline_1', 'S3Source_1') }}", 
+          "sourceType": "UnreferencedSource"
         }
     )
-    model_sanity_parent_orchestration_pipeline_1_Join_1 = Task(
-        task_id = "model_sanity_parent_orchestration_pipeline_1_Join_1", 
+    sanity_parent_orchestration_pipeline_1__Join_1 = Task(
+        task_id = "sanity_parent_orchestration_pipeline_1__Join_1", 
         component = "Model", 
-        modelName = "model_sanity_parent_orchestration_pipeline_1_Join_1"
+        modelName = "sanity_parent_orchestration_pipeline_1__Join_1"
     )
     S3Source_1 = SourceTask(
         task_id = "S3Source_1", 
@@ -87,7 +86,7 @@ with DAG():
         connection = Connection(kind = "smtp", id = "smtp"), 
         fileFormat = "xlsx"
     )
-    S3Source_1.out0 >> S3Source_1.input_port_0_1
-    env_uitesting_main_model_databricks_1_1.out >> model_sanity_parent_orchestration_pipeline_1_Join_1.in_0
-    S3Source_1.output_port_0_1 >> model_sanity_parent_orchestration_pipeline_1_Join_1.in_2
-    model_sanity_parent_orchestration_pipeline_1_Join_1.out_0 >> send_danger_email.in0
+    S3Source_1.out0 >> S3Source_1.input_port_0
+    env_uitesting_main_model_databricks_1_1.out >> sanity_parent_orchestration_pipeline_1__Join_1.in_0
+    S3Source_1.output_port_0 >> sanity_parent_orchestration_pipeline_1__Join_1.in_2
+    sanity_parent_orchestration_pipeline_1__Join_1.out_0 >> send_danger_email.in0

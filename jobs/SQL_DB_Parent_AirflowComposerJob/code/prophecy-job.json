@@ -11,7 +11,8 @@
       "emails" : "",
       "onStart" : false,
       "onSuccess" : false,
-      "onFailure" : false
+      "onFailure" : false,
+      "onDurationWarningThresholdExceeded" : false
     },
     "maxConcurrentRuns" : 1,
     "processDefaultSettings" : {
@@ -19,52 +20,6 @@
       "ignore_first_depends_on_past" : true,
       "do_xcom_push" : true
     },
-    "availableFabrics" : [ {
-      "id" : "22",
-      "name" : "dev_airflow_prophecy_managed",
-      "trialStartDate" : 1695736560346
-    }, {
-      "id" : "25",
-      "name" : "dev_airflow_mwaa"
-    }, {
-      "id" : "1013",
-      "name" : "dev_airflow_273"
-    }, {
-      "id" : "24",
-      "name" : "dev_airflow"
-    }, {
-      "id" : "2393",
-      "name" : "dev_airflow_263"
-    }, {
-      "id" : "2679",
-      "name" : "Automation_python_AirflowOpenSource",
-      "artifactsLocation" : "/mnt/airflow/artifacts"
-    }, {
-      "id" : "2418",
-      "name" : "dev_aiflow_open_source",
-      "artifactsLocation" : "/mnt/airflow/artifacts"
-    }, {
-      "id" : "2447",
-      "name" : "sanity_airflow_os",
-      "artifactsLocation" : "/mnt/airflow/artifacts"
-    }, {
-      "id" : "2492",
-      "name" : "dev_airflow_mwaa_assumed_role_fabric"
-    }, {
-      "id" : "3031",
-      "name" : "Automation_scala_AirflowOpenSource",
-      "artifactsLocation" : "/mnt/airflow/artifacts"
-    }, {
-      "id" : "2771",
-      "name" : "Airflow123"
-    }, {
-      "id" : "2896",
-      "name" : "dev_airflow_prophecy_managed_expired",
-      "trialStartDate" : 1719309774972
-    }, {
-      "id" : "2980",
-      "name" : "airflow_composer_fabric"
-    } ],
     "maxActiveRuns" : 1,
     "catchup" : false,
     "tags" : [ ],
@@ -81,7 +36,8 @@
       "databricks" : false,
       "dataproc" : false,
       "emr" : false,
-      "onprem" : false
+      "onprem" : false,
+      "emr_serverless" : false
     }
   },
   "processes" : {
@@ -108,7 +64,7 @@
         "retries" : 0
       },
       "properties" : {
-        "entityId" : "66/.prophecy/metadata/sqlmodels/env_uitesting_main_model_databricks_1",
+        "entityId" : null,
         "cacheSelectedOnly" : null,
         "gitSubPath" : null,
         "runModelWithParents" : true,
@@ -143,7 +99,7 @@
         "select" : null,
         "recordTimingInfo" : null,
         "fullRefresh" : null,
-        "entityName" : "env_uitesting_main_model_databricks_1",
+        "entityName" : null,
         "noCacheSelectedOnly" : null,
         "noFavorState" : null,
         "snapshot" : null,

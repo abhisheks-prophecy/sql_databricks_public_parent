@@ -1,7 +1,6 @@
 {{
   config({    
-    "materialized": "table",
-    "alias": "prophecy_tmp__mh053wpt__sanity_parent_orchestration_pipeline_1__Join_1",
+    "materialized": "ephemeral",
     "database": "hive_metastore",
     "schema": "qa_db_warehouse"
   })
@@ -9,9 +8,9 @@
 
 WITH S3Source_1 AS (
 
-  SELECT * 
+  SELECT *
   
-  FROM {{ source('prophecy_tmp_source__sanity_parent_orchestration_pipeline_1', 'prophecy_tmp__mh053wpt__sanity_parent_orchestration_pipeline_1__S3Source_1') }}
+  FROM {{ prophecy_tmp_source('sanity_parent_orchestration_pipeline_1', 'S3Source_1') }}
 
 ),
 
