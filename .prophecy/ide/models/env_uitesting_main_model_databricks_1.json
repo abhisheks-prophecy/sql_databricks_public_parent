@@ -1365,7 +1365,7 @@
         "noOfColumns" : 1,
         "_oldMacroProperties" : {
           "macroName" : "TextToColumns",
-          "projectName" : "DatabricksSqlBasics",
+          "projectName" : "prophecy_basics",
           "parameters" : [ {
             "name" : "relation_name",
             "value" : "['Limit_2']"
@@ -1413,11 +1413,11 @@
         "autoUpdateOnRun" : false
       },
       "componentInfo" : {
-        "gemId" : "TextToColumns_DatabricksSqlBasics",
+        "gemId" : "TextToColumns_prophecy_basics",
         "name" : "TextToColumns",
-        "projectName" : "DatabricksSqlBasics",
-        "sourceProjectName" : "DatabricksSqlBasics",
-        "sourceProjectVersion" : "0.0.4"
+        "projectName" : "prophecy_basics",
+        "sourceProjectName" : "prophecy_basics",
+        "sourceProjectVersion" : "0.0.1.dev6"
       }
     },
     "QFADVQYCvofejUVztLrjL$$1Fdzp5wVvhdBa_Ico22hz" : {
@@ -1437,7 +1437,7 @@
         "suffix" : "",
         "_oldMacroProperties" : {
           "macroName" : "MultiColumnRename",
-          "projectName" : "DatabricksSqlBasics",
+          "projectName" : "prophecy_basics",
           "parameters" : [ {
             "name" : "relation_name",
             "value" : "['Limit_2']"
@@ -1484,11 +1484,11 @@
         "autoUpdateOnRun" : false
       },
       "componentInfo" : {
-        "gemId" : "MultiColumnRename_DatabricksSqlBasics",
+        "gemId" : "MultiColumnRename_prophecy_basics",
         "name" : "MultiColumnRename",
-        "projectName" : "DatabricksSqlBasics",
-        "sourceProjectName" : "DatabricksSqlBasics",
-        "sourceProjectVersion" : "0.0.4"
+        "projectName" : "prophecy_basics",
+        "sourceProjectName" : "prophecy_basics",
+        "sourceProjectVersion" : "0.0.1.dev6"
       }
     },
     "all_type_partitioned##w46tICDz" : {
@@ -3059,8 +3059,8 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "all_type_partitioned_1",
-        "x" : 880,
-        "y" : -240,
+        "x" : 840,
+        "y" : -140,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -3207,7 +3207,7 @@
         "relation_name" : [ "MultiColumnRename_1" ],
         "_oldMacroProperties" : {
           "macroName" : "Transpose",
-          "projectName" : "DatabricksSqlBasics",
+          "projectName" : "prophecy_basics",
           "parameters" : [ {
             "name" : "relation_name",
             "value" : "['MultiColumnRename_1']"
@@ -3248,11 +3248,11 @@
         "autoUpdateOnRun" : false
       },
       "componentInfo" : {
-        "gemId" : "Transpose_DatabricksSqlBasics",
+        "gemId" : "Transpose_prophecy_basics",
         "name" : "Transpose",
-        "projectName" : "DatabricksSqlBasics",
-        "sourceProjectName" : "DatabricksSqlBasics",
-        "sourceProjectVersion" : "0.0.4"
+        "projectName" : "prophecy_basics",
+        "sourceProjectName" : "prophecy_basics",
+        "sourceProjectVersion" : "0.0.1.dev6"
       }
     },
     "kpb6Knw6pfAKRNh70mqXo$$Ro_Gk1_JPuf_xs-IuZy-N" : {
@@ -3279,7 +3279,7 @@
         "replaceNullTimeFields" : false,
         "_oldMacroProperties" : {
           "macroName" : "DataCleansing",
-          "projectName" : "DatabricksSqlBasics",
+          "projectName" : "prophecy_basics",
           "parameters" : [ {
             "name" : "relation_name",
             "value" : "['TextToColumns_1']"
@@ -3362,11 +3362,11 @@
         "autoUpdateOnRun" : false
       },
       "componentInfo" : {
-        "gemId" : "DataCleansing_DatabricksSqlBasics",
+        "gemId" : "DataCleansing_prophecy_basics",
         "name" : "DataCleansing",
-        "projectName" : "DatabricksSqlBasics",
-        "sourceProjectName" : "DatabricksSqlBasics",
-        "sourceProjectVersion" : "0.0.4"
+        "projectName" : "prophecy_basics",
+        "sourceProjectName" : "prophecy_basics",
+        "sourceProjectVersion" : "0.0.1.dev6"
       }
     }
   },
