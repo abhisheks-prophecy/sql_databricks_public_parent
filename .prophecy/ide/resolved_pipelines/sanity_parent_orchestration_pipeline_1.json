@@ -210,7 +210,7 @@
       "kind" : "S3Source",
       "metadata" : {
         "label" : "S3Source_1",
-        "x" : 220,
+        "x" : 230,
         "y" : 180,
         "phase" : 0
       },
@@ -386,7 +386,7 @@
       "component" : "Model",
       "metadata" : {
         "label" : "env_uitesting_main_model_databricks_1_1",
-        "x" : 920,
+        "x" : 930,
         "y" : 360
       },
       "properties" : {
@@ -498,7 +498,7 @@
       "component" : "Email",
       "metadata" : {
         "label" : "send_danger_email",
-        "x" : 1540,
+        "x" : 1550,
         "y" : 180
       },
       "properties" : {
