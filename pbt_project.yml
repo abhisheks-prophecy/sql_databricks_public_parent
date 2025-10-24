@@ -569,8 +569,6 @@ sqlSources:
       author: abhisheks+e2etests@prophecy.io
       createdAt: '2023-04-15 08:50:11'
 sqlUnreferencedSources: {}
-sqlOrchestratorPipelines: {}
-sqlBusinessApps: {}
 sqlPipeline:
   name: sqlPipeline
   description: null
@@ -581,3 +579,4 @@ projectDependencies: {}
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}
+projectConfigurations: {}
