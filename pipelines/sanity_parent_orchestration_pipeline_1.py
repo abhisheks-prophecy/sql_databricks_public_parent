@@ -86,7 +86,7 @@ with DAG():
         connection = Connection(kind = "smtp", id = "smtp"), 
         fileFormat = "xlsx"
     )
-    S3Source_1.out0 >> S3Source_1.input_port_0
+    S3Source_1.out0 >> S3Source_1.input_port_FRsq3Unf
     env_uitesting_main_model_databricks_1_1.out >> sanity_parent_orchestration_pipeline_1__Join_1.in_0
-    S3Source_1.output_port_0 >> sanity_parent_orchestration_pipeline_1__Join_1.in_2
+    S3Source_1.output_port_iYOy49Tf >> sanity_parent_orchestration_pipeline_1__Join_1.in_2
     sanity_parent_orchestration_pipeline_1__Join_1.out_0 >> send_danger_email.in0

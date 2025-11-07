@@ -1585,8 +1585,8 @@
       "metadata" : {
         "label" : "Subgraph_2",
         "slug" : "Subgraph_2",
-        "x" : 1340,
-        "y" : -20,
+        "x" : 1440,
+        "y" : -360,
         "phase" : 0,
         "macroDependencies" : [ ]
       },

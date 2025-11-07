@@ -1,17 +1,71 @@
 {
-  "id" : "sanity_parent_orchestration_pipeline_1",
+  "id" : "sanity_parent_orchestration_pipeline_1__Join_1",
   "metainfo" : {
-    "label" : "sanity_parent_orchestration_pipeline_1",
-    "autoLayout" : false,
-    "version" : 1,
-    "configuration" : {
-      "schema" : {
-        "type" : "record",
-        "fields" : [ ]
+    "label" : "sanity_parent_orchestration_pipeline_1__Join_1",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"hive_metastore\"",
+        "schema" : "\"qa_db_warehouse\"",
+        "type" : "ModelConfig"
       }
-    }
+    },
+    "version" : 3
   },
   "processes" : {
+    "S3Source_1_0a48bb57-1edf-490a-a883-7ebec8a026f2" : {
+      "id" : "S3Source_1_0a48bb57-1edf-490a-a883-7ebec8a026f2",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "S3Source_1"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_iYOy49Tf",
+          "id" : "output_port_iYOy49Tf",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ prophecy_tmp_source('sanity_parent_orchestration_pipeline_1', 'S3Source_1') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_tWpiMc1m",
+          "slug" : "input_port_FRsq3Unf"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_lh0NJNot",
+          "slug" : "output_port_iYOy49Tf",
+          "dataExplorerProps" : {
+            "sorts" : [ ],
+            "filter" : {
+              "type" : "Composite",
+              "op" : {
+                "type" : "AND"
+              },
+              "filters" : [ {
+                "lhs" : {
+                  "type" : "Field",
+                  "value" : "Variable_category"
+                },
+                "type" : "Binary",
+                "op" : "=",
+                "rhs" : {
+                  "type" : "Literal",
+                  "value" : "'Financial performance'"
+                }
+              } ]
+            }
+          }
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
     "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3" : {
       "id" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
       "component" : "Join",
@@ -154,7 +208,38 @@
           "id" : "pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Join_1_pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH" : {
+      "id" : "Join_1_pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "Join_1"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM Join_1\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_hn2wtGCK",
+          "slug" : "input_port_EjugcpJZ"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_hLRaHIrn",
+          "slug" : "output_port_bRRyzLQS"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
     "vEkqVS8Z1AmXW7KABrJVw$$pXjeU3HhbDpmJUgANqYTJ" : {
@@ -184,7 +269,8 @@
           "id" : "dC53X80CkVa4YDAQMtNF5$$_mLXR8OsEBMaqmGRFLYz9",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
     "SVTxwjzsOk-WJW6HXIFrV$$AQiyLagn_deyQK_qpZXsQ" : {
@@ -269,7 +355,8 @@
           "id" : "uPbvNTg99hNuk_Mq-ZKtJ$$z4NuCmzaIdZt1Ije9tYM-",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
     "mh1Xl4VTWr1LpvUW01mMu$$xKu6DdxJzT6a32GuNlmmN" : {
@@ -298,7 +385,8 @@
           "id" : "4-bMiI15i2WdKXxwsrDn8$$a8xqq7j9cmS8Js6jgm_Jn",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
     "m9RlZSSA59AYGHcOZtxpI$$O0r3hyw-0nCleid4yXPYw" : {
@@ -333,129 +421,8 @@
           "id" : "bGB8Rt7cMB_E2yDDeYfze$$WJQ1yOgLi815zxxskxFBC",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
-      }
-    },
-    "_vSrbpCqSxQ_Qtfm8A80A" : {
-      "id" : "_vSrbpCqSxQ_Qtfm8A80A",
-      "component" : "OrchestrationSource",
-      "kind" : "S3Source",
-      "metadata" : {
-        "label" : "S3Source_1",
-        "x" : 220,
-        "y" : 180,
-        "phase" : 0
-      },
-      "properties" : {
-        "connector" : {
-          "kind" : "s3",
-          "properties" : {
-            "id" : "s3"
-          },
-          "type" : "connector"
-        },
-        "format" : {
-          "kind" : "csv",
-          "properties" : {
-            "header" : true,
-            "schema" : {
-              "fields" : [ {
-                "dataType" : {
-                  "type" : "Bigint"
-                },
-                "description" : "The year in which the data was collected.",
-                "name" : "Year"
-              }, {
-                "dataType" : {
-                  "type" : "String"
-                },
-                "description" : "The classification of industries based on the New Zealand Standard Industry Output Classification.",
-                "name" : "Industry_aggregation_NZSIOC"
-              }, {
-                "dataType" : {
-                  "type" : "String"
-                },
-                "description" : "Code representing the industry classification according to NZSIOC standards",
-                "name" : "Industry_code_NZSIOC"
-              }, {
-                "dataType" : {
-                  "type" : "String"
-                },
-                "description" : "Name of the industry as per the NZSIOC classification",
-                "name" : "Industry_name_NZSIOC"
-              }, {
-                "dataType" : {
-                  "type" : "String"
-                },
-                "description" : "The measurement units used for the data values",
-                "name" : "Units"
-              }, {
-                "dataType" : {
-                  "type" : "String"
-                },
-                "description" : "Code representing the specific variable being measured",
-                "name" : "Variable_code"
-              }, {
-                "dataType" : {
-                  "type" : "String"
-                },
-                "description" : "Name of the variable being measured in the dataset",
-                "name" : "Variable_name"
-              }, {
-                "dataType" : {
-                  "type" : "String"
-                },
-                "description" : "Category classification of the variable being measured",
-                "name" : "Variable_category"
-              }, {
-                "dataType" : {
-                  "type" : "String"
-                },
-                "description" : "The measured value associated with the industry data",
-                "name" : "Value"
-              }, {
-                "dataType" : {
-                  "type" : "String"
-                },
-                "description" : "The code representing the industry classification according to ANZSIC 2006 standards.",
-                "name" : "Industry_code_ANZSIC06"
-              } ],
-              "providerType" : "arrow"
-            },
-            "separator" : ","
-          }
-        },
-        "properties" : {
-          "filePath" : "/datasets/orchestration_datasets/csv/valid/9MB_annual-enterprise-survey-2023-financial-year-provisional.csv"
-        }
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "0a48bb57-1edf-490a-a883-7ebec8a026f2",
-          "slug" : "out0",
-          "dataExplorerProps" : {
-            "sorts" : [ ],
-            "filter" : {
-              "type" : "Composite",
-              "op" : {
-                "type" : "AND"
-              },
-              "filters" : [ {
-                "lhs" : {
-                  "type" : "Field",
-                  "value" : "Variable_category"
-                },
-                "type" : "Binary",
-                "op" : "=",
-                "rhs" : {
-                  "type" : "Literal",
-                  "value" : "'Financial performance'"
-                }
-              } ]
-            }
-          }
-        } ]
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
     "ChOk4BugA7oTy_Cy4iIFX$$Ysy_XjUnCbgHoLvcxZXfQ" : {
@@ -552,7 +519,8 @@
           "id" : "PHCamDXe6KE8DHdR1v3nq$$hI1vBMe_riVakmkFHNDjm",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
     "hM_3DdNi-bqq8MhaIN0M7$$r5jocjn56mDoXiPocpU0m" : {
@@ -564,162 +532,47 @@
         "y" : 360
       },
       "properties" : {
-        "modelName" : "env_uitesting_main_model_databricks_1"
+        "table" : {
+          "name" : "env_uitesting_main_model_databricks_1",
+          "sourceType" : "Model",
+          "alias" : ""
+        }
       },
       "ports" : {
-        "inputs" : [ {
-          "id" : "9bUwsF7d-ACLOowFhIwLI$$jgu5Szf9W126ohlh1anMR",
-          "slug" : "in0"
-        } ],
+        "inputs" : [ ],
         "outputs" : [ {
           "id" : "uPesk6KgnrinfnkG-nutq$$0HwNCPb80A3p__aqZomaS",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "p_int",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "p_string",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "c_string",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "c_int",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "c_bigint",
-              "dataType" : {
-                "type" : "Double"
-              }
-            }, {
-              "name" : "c_smallint",
-              "dataType" : {
-                "type" : "SmallInt"
-              }
-            }, {
-              "name" : "c_tinyint",
-              "dataType" : {
-                "type" : "TinyInt"
-              }
-            }, {
-              "name" : "c_float",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "c_boolean",
-              "dataType" : {
-                "type" : "Boolean"
-              }
-            }, {
-              "name" : "c_array",
-              "dataType" : {
-                "type" : "Array",
-                "dataType" : {
-                  "type" : "String"
-                }
-              }
-            }, {
-              "name" : "c_double",
-              "dataType" : {
-                "type" : "Double"
-              }
-            }, {
-              "name" : "c_struct",
-              "dataType" : {
-                "type" : "Struct",
-                "fields" : [ {
-                  "name" : "city",
-                  "dataType" : {
-                    "type" : "String"
-                  }
-                }, {
-                  "name" : "state",
-                  "dataType" : {
-                    "type" : "String"
-                  }
-                }, {
-                  "name" : "pin",
-                  "dataType" : {
-                    "type" : "Bigint"
-                  }
-                } ]
-              }
-            }, {
-              "name" : "c_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : true
-      }
-    },
-    "bSp2BAeazUMeXNYr3jMIj$$F2uUDa4J2gWeJ6VJyyG6T" : {
-      "id" : "bSp2BAeazUMeXNYr3jMIj$$F2uUDa4J2gWeJ6VJyyG6T",
-      "component" : "Email",
-      "metadata" : {
-        "label" : "send_danger_email",
-        "x" : 1540,
-        "y" : 180
-      },
-      "properties" : {
-        "body" : "This is a dangerous email from sanity pipeline for parent databricks project",
-        "subject" : "This is a dangerous email from sanity pipeline for parent databricks project",
-        "includeData" : true,
-        "fileName" : "sanity_parent_sql_databricks",
-        "to" : [ "abhisheks@prophecy.io" ],
-        "bcc" : [ "abhisheks+bcc@prophecy.io" ],
-        "cc" : [ "abhisheks+cc@prophecy.io" ],
-        "connection" : {
-          "kind" : "smtp",
-          "properties" : {
-            "id" : "smtp"
-          },
-          "type" : "connector"
-        },
-        "fileFormat" : "xlsx"
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "JOXtSL4dHNARGh2BndgWS$$id-YxQ96Saec_RYzWsrGD",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     }
   },
   "connections" : [ {
-    "id" : "7p3eDzmf0Fbe6oIbO2AgC$$_L2RSYEWv1Q6StcawUyNF",
-    "source" : "_vSrbpCqSxQ_Qtfm8A80A",
-    "sourcePort" : "0a48bb57-1edf-490a-a883-7ebec8a026f2",
-    "target" : "m9RlZSSA59AYGHcOZtxpI$$O0r3hyw-0nCleid4yXPYw",
-    "targetPort" : "hbC8g47rNx88OHrTIVAF-$$mGhAMktxY-5M3l8aoo0wC"
+    "id" : "conn_jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3_Join_1_pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH_no0O1qV5",
+    "source" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
+    "sourcePort" : "pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH",
+    "target" : "Join_1_pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH",
+    "targetPort" : "input_port_hn2wtGCK"
   }, {
-    "id" : "p-bX9sOS0lBIbTDoD-CuF$$nboUbfovjq4GKZkko9ZWq",
-    "source" : "m9RlZSSA59AYGHcOZtxpI$$O0r3hyw-0nCleid4yXPYw",
-    "sourcePort" : "bGB8Rt7cMB_E2yDDeYfze$$WJQ1yOgLi815zxxskxFBC",
-    "target" : "SVTxwjzsOk-WJW6HXIFrV$$AQiyLagn_deyQK_qpZXsQ",
-    "targetPort" : "3GJQ5BE6pT_AekQrGQJ8H$$Jy_WVb-XM5VtupVwD5uNZ"
+    "id" : "icPEC2ohz8kZNfMYNRKyA",
+    "source" : "hM_3DdNi-bqq8MhaIN0M7$$r5jocjn56mDoXiPocpU0m",
+    "sourcePort" : "uPesk6KgnrinfnkG-nutq$$0HwNCPb80A3p__aqZomaS",
+    "target" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
+    "targetPort" : "8-feNove7Bs0VviWp3xX9$$T71qBqKi7bcktRx0Y-Tmb"
   }, {
-    "id" : "cXjIrfK9EJmFw6Q1ES9Kb$$tu1sPYCPX6t5sW7umWbzd",
-    "source" : "SVTxwjzsOk-WJW6HXIFrV$$AQiyLagn_deyQK_qpZXsQ",
-    "sourcePort" : "uPbvNTg99hNuk_Mq-ZKtJ$$z4NuCmzaIdZt1Ije9tYM-",
-    "target" : "ChOk4BugA7oTy_Cy4iIFX$$Ysy_XjUnCbgHoLvcxZXfQ",
-    "targetPort" : "J8BuGsnd84bJrXkbmTQpD$$M9iD2yScm3RWfbp_Z6lYA"
+    "id" : "9KLZBnJ06cwqaVpWVoRNU$$2LsWBYBjCslCzjn6G1AEU",
+    "source" : "mh1Xl4VTWr1LpvUW01mMu$$xKu6DdxJzT6a32GuNlmmN",
+    "sourcePort" : "4-bMiI15i2WdKXxwsrDn8$$a8xqq7j9cmS8Js6jgm_Jn",
+    "target" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
+    "targetPort" : "Nd30xkdejYA_DOGMKAZPG$$tkEq_9HsXNH-PnaCnHQIR"
+  }, {
+    "id" : "z-kVmlsrNla3NHaBw3eFD",
+    "source" : "vEkqVS8Z1AmXW7KABrJVw$$pXjeU3HhbDpmJUgANqYTJ",
+    "sourcePort" : "dC53X80CkVa4YDAQMtNF5$$_mLXR8OsEBMaqmGRFLYz9",
+    "target" : "mh1Xl4VTWr1LpvUW01mMu$$xKu6DdxJzT6a32GuNlmmN",
+    "targetPort" : "BDQjFitT9s3pGzBLcqIn8$$xTrJUaCuCn5HtErMyJ8I6"
   }, {
     "id" : "wdAcNnkYOVa9giWB4NAOr$$TFiTDdy5IkvWZMSswimqD",
     "source" : "ChOk4BugA7oTy_Cy4iIFX$$Ysy_XjUnCbgHoLvcxZXfQ",
@@ -733,29 +586,23 @@
     "target" : "vEkqVS8Z1AmXW7KABrJVw$$pXjeU3HhbDpmJUgANqYTJ",
     "targetPort" : "t6vA2gZek9DuDWC0kKyO9$$bRO8XO3jjlkpdzWUmowKt"
   }, {
-    "id" : "z-kVmlsrNla3NHaBw3eFD",
-    "source" : "vEkqVS8Z1AmXW7KABrJVw$$pXjeU3HhbDpmJUgANqYTJ",
-    "sourcePort" : "dC53X80CkVa4YDAQMtNF5$$_mLXR8OsEBMaqmGRFLYz9",
-    "target" : "mh1Xl4VTWr1LpvUW01mMu$$xKu6DdxJzT6a32GuNlmmN",
-    "targetPort" : "BDQjFitT9s3pGzBLcqIn8$$xTrJUaCuCn5HtErMyJ8I6"
+    "id" : "cXjIrfK9EJmFw6Q1ES9Kb$$tu1sPYCPX6t5sW7umWbzd",
+    "source" : "SVTxwjzsOk-WJW6HXIFrV$$AQiyLagn_deyQK_qpZXsQ",
+    "sourcePort" : "uPbvNTg99hNuk_Mq-ZKtJ$$z4NuCmzaIdZt1Ije9tYM-",
+    "target" : "ChOk4BugA7oTy_Cy4iIFX$$Ysy_XjUnCbgHoLvcxZXfQ",
+    "targetPort" : "J8BuGsnd84bJrXkbmTQpD$$M9iD2yScm3RWfbp_Z6lYA"
   }, {
-    "id" : "icPEC2ohz8kZNfMYNRKyA",
-    "source" : "hM_3DdNi-bqq8MhaIN0M7$$r5jocjn56mDoXiPocpU0m",
-    "sourcePort" : "uPesk6KgnrinfnkG-nutq$$0HwNCPb80A3p__aqZomaS",
-    "target" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
-    "targetPort" : "8-feNove7Bs0VviWp3xX9$$T71qBqKi7bcktRx0Y-Tmb"
+    "id" : "p-bX9sOS0lBIbTDoD-CuF$$nboUbfovjq4GKZkko9ZWq",
+    "source" : "m9RlZSSA59AYGHcOZtxpI$$O0r3hyw-0nCleid4yXPYw",
+    "sourcePort" : "bGB8Rt7cMB_E2yDDeYfze$$WJQ1yOgLi815zxxskxFBC",
+    "target" : "SVTxwjzsOk-WJW6HXIFrV$$AQiyLagn_deyQK_qpZXsQ",
+    "targetPort" : "3GJQ5BE6pT_AekQrGQJ8H$$Jy_WVb-XM5VtupVwD5uNZ"
   }, {
-    "id" : "sBaUctCzzvbc3Re2qZmrc$$mMSVIbjjvye9Nj0dNZkHJ",
-    "source" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
-    "sourcePort" : "pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH",
-    "target" : "bSp2BAeazUMeXNYr3jMIj$$F2uUDa4J2gWeJ6VJyyG6T",
-    "targetPort" : "JOXtSL4dHNARGh2BndgWS$$id-YxQ96Saec_RYzWsrGD"
-  }, {
-    "id" : "9KLZBnJ06cwqaVpWVoRNU$$2LsWBYBjCslCzjn6G1AEU",
-    "source" : "mh1Xl4VTWr1LpvUW01mMu$$xKu6DdxJzT6a32GuNlmmN",
-    "sourcePort" : "4-bMiI15i2WdKXxwsrDn8$$a8xqq7j9cmS8Js6jgm_Jn",
-    "target" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
-    "targetPort" : "Nd30xkdejYA_DOGMKAZPG$$tkEq_9HsXNH-PnaCnHQIR"
+    "id" : "7p3eDzmf0Fbe6oIbO2AgC$$_L2RSYEWv1Q6StcawUyNF",
+    "source" : "S3Source_1_0a48bb57-1edf-490a-a883-7ebec8a026f2",
+    "sourcePort" : "output_port_lh0NJNot",
+    "target" : "m9RlZSSA59AYGHcOZtxpI$$O0r3hyw-0nCleid4yXPYw",
+    "targetPort" : "hbC8g47rNx88OHrTIVAF-$$mGhAMktxY-5M3l8aoo0wC"
   } ],
-  "component" : "Pipeline"
+  "component" : "Model"
 }
