@@ -23,8 +23,8 @@
       "component" : "SQLStatement",
       "metadata" : {
         "label" : "SQLStatement_2",
-        "x" : 1620,
-        "y" : 60,
+        "x" : 1540,
+        "y" : 80,
         "phase" : 0,
         "macroDependencies" : [ ],
         "comment" : "Identifies records where a specific integer does not match the count of entries in another dataset.",
@@ -58,80 +58,6 @@
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
-      }
-    },
-    "sJjcUdPYqw1AiFB3awPqb$$E9WM9oSmhZvKhcdv6JGjv" : {
-      "id" : "sJjcUdPYqw1AiFB3awPqb$$E9WM9oSmhZvKhcdv6JGjv",
-      "component" : "TextToColumns",
-      "metadata" : {
-        "label" : "TextToColumns_1",
-        "slug" : "TextToColumns_1",
-        "x" : 1240,
-        "y" : 240,
-        "phase" : 0,
-        "macroDependencies" : [ ]
-      },
-      "properties" : {
-        "split_strategy" : "splitColumns",
-        "splitColumnPrefix" : "root",
-        "relation_name" : [ "Limit_2" ],
-        "columnNames" : "c_string",
-        "noOfColumns" : 1,
-        "_oldMacroProperties" : {
-          "macroName" : "TextToColumns",
-          "projectName" : "prophecy_basics",
-          "parameters" : [ {
-            "name" : "relation_name",
-            "value" : "[\"Limit_2\"]"
-          }, {
-            "name" : "columnNames",
-            "value" : "c_string"
-          }, {
-            "name" : "delimiter",
-            "value" : "a"
-          }, {
-            "name" : "split_strategy",
-            "value" : "splitColumns"
-          }, {
-            "name" : "noOfColumns",
-            "value" : "1"
-          }, {
-            "name" : "leaveExtraCharLastCol",
-            "value" : "Leave extra in last column"
-          }, {
-            "name" : "splitColumnPrefix",
-            "value" : "root"
-          }, {
-            "name" : "splitColumnSuffix",
-            "value" : "generated"
-          }, {
-            "name" : "splitRowsColumnName",
-            "value" : "generated_column"
-          } ]
-        },
-        "splitColumnSuffix" : "generated",
-        "splitRowsColumnName" : "generated_column",
-        "leaveExtraCharLastCol" : "Leave extra in last column",
-        "delimiter" : "a"
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "XXARKgUkl6aDcav8CbmOZ$$Wx2ktP-aLvTnvRMe3yzHp",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "jl-za3qA7jqDfEzxWTvKY$$S_7jCLuk_D-FDkuJ0Y0nx",
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "componentInfo" : {
-        "gemId" : "TextToColumns_prophecy_basics",
-        "name" : "TextToColumns",
-        "projectName" : "prophecy_basics",
-        "sourceProjectName" : "prophecy_basics",
-        "sourceProjectVersion" : "1.0.3.dev0"
       }
     },
     "env_uitesting_main_model_databricks_1##QsxEGUKB" : {
@@ -173,8 +99,8 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "all_type_non_partitioned_1",
-        "x" : 820,
-        "y" : -180,
+        "x" : 1080,
+        "y" : 20,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -200,8 +126,8 @@
       "component" : "Source",
       "metadata" : {
         "label" : "all_type_non_partitioned",
-        "x" : 520,
-        "y" : 60,
+        "x" : 380,
+        "y" : -120,
         "phase" : 0
       },
       "properties" : {
@@ -228,7 +154,7 @@
         "label" : "Subgraph_1",
         "slug" : "Subgraph_1",
         "x" : 680,
-        "y" : 460,
+        "y" : 520,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -807,7 +733,7 @@
             "label" : "raw_orders_seed",
             "slug" : "raw_orders_seed",
             "x" : -420,
-            "y" : -320,
+            "y" : -300,
             "phase" : 0,
             "isLabelGrayed" : false
           },
@@ -1420,36 +1346,81 @@
       "properties" : { },
       "canonical" : false
     },
+    "CxgwzkdvegrsFEh-kRWyl$$vCkjpIbKhDI1aPj8iLYwH" : {
+      "id" : "CxgwzkdvegrsFEh-kRWyl$$vCkjpIbKhDI1aPj8iLYwH",
+      "component" : "TextToColumns",
+      "metadata" : {
+        "label" : "TextToColumns_1",
+        "slug" : "TextToColumns_1",
+        "x" : 1360,
+        "y" : 300,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "split_strategy" : "splitColumns",
+        "splitColumnPrefix" : "root",
+        "relation_name" : [ "Limit_2" ],
+        "columnNames" : "c_string",
+        "noOfColumns" : 1,
+        "splitColumnSuffix" : "generated",
+        "splitRowsColumnName" : "generated_column",
+        "leaveExtraCharLastCol" : "Leave extra in last column",
+        "delimiter" : "a"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "vdaSQss-gCnlGv2Se5_8h$$wBzBF-WRZTCrXh8ipI0Ot",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "75p1qoisKZuKf8r3I4IqI$$x-oloQbBRHcxSXY9aaURT",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "componentInfo" : {
+        "gemId" : "TextToColumns_DatabricksSqlBasics",
+        "name" : "TextToColumns",
+        "projectName" : "DatabricksSqlBasics",
+        "sourceProjectName" : "DatabricksSqlBasics",
+        "sourceProjectVersion" : "0.0.4"
+      }
+    },
     "QFADVQYCvofejUVztLrjL$$1Fdzp5wVvhdBa_Ico22hz" : {
       "id" : "QFADVQYCvofejUVztLrjL$$1Fdzp5wVvhdBa_Ico22hz",
       "component" : "MultiColumnRename",
       "metadata" : {
         "label" : "MultiColumnRename_1",
         "slug" : "MultiColumnRename_1",
-        "x" : 1280,
-        "y" : 120,
+        "x" : 1260,
+        "y" : 160,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
       "properties" : {
         "relation_name" : [ "Limit_2" ],
-        "columnNames" : [ "c_tinyint", "c_smallint", "c_int", "c_bigint", "id", "user_id", "order_date", "status", "p_string", "c_boolean", "c_string", "c_float", "c_array", "c_struct", "c_double" ],
+        "columnNames" : [ "c_tinyint", "c_smallint", "c_int", "c_bigint", "id", "user_id", "order_date", "status", "p_string", "c_boolean", "c_double", "c_string", "c_float", "c_array", "c_struct" ],
         "suffix" : "",
         "_oldMacroProperties" : {
           "macroName" : "MultiColumnRename",
-          "projectName" : "prophecy_basics",
+          "projectName" : "DatabricksSqlBasics",
           "parameters" : [ {
             "name" : "relation_name",
-            "value" : "[\"Limit_2\"]"
+            "value" : "['Limit_2']"
           }, {
             "name" : "schema",
             "value" : "[{\"name\": \"c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"c_int\", \"dataType\": \"Integer\"}, {\"name\": \"c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"c_float\", \"dataType\": \"Float\"}, {\"name\": \"c_double\", \"dataType\": \"Double\"}, {\"name\": \"c_string\", \"dataType\": \"String\"}, {\"name\": \"c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"c_array\", \"dataType\": \"Array\"}, {\"name\": \"c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"p_string\", \"dataType\": \"String\"}, {\"name\": \"id\", \"dataType\": \"Integer\"}, {\"name\": \"user_id\", \"dataType\": \"Integer\"}, {\"name\": \"order_date\", \"dataType\": \"Date\"}, {\"name\": \"status\", \"dataType\": \"String\"}]"
           }, {
             "name" : "columnNames",
-            "value" : "[\"c_tinyint\", \"c_smallint\", \"c_int\", \"c_bigint\", \"id\", \"user_id\", \"order_date\", \"status\", \"p_string\", \"c_boolean\", \"c_string\", \"c_float\", \"c_array\", \"c_struct\", \"c_double\"]"
+            "value" : "[\"c_tinyint\", \"c_smallint\", \"c_int\", \"c_bigint\", \"id\", \"user_id\", \"order_date\", \"status\", \"p_string\", \"c_boolean\", \"c_double\", \"c_string\", \"c_float\", \"c_array\", \"c_struct\"]"
           }, {
             "name" : "renameMethod",
             "value" : "editPrefixSuffix"
+          }, {
+            "name" : "editOperation",
+            "value" : "Add"
           }, {
             "name" : "editType",
             "value" : "Prefix"
@@ -1461,6 +1432,7 @@
             "value" : "concat(upper(column_name), '_',column_name)"
           } ]
         },
+        "editOperation" : "Add",
         "editWith" : "pre_",
         "schema" : "[{\"name\": \"c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"c_int\", \"dataType\": \"Integer\"}, {\"name\": \"c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"c_float\", \"dataType\": \"Float\"}, {\"name\": \"c_double\", \"dataType\": \"Double\"}, {\"name\": \"c_string\", \"dataType\": \"String\"}, {\"name\": \"c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"c_array\", \"dataType\": \"Array\"}, {\"name\": \"c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"p_string\", \"dataType\": \"String\"}, {\"name\": \"id\", \"dataType\": \"Integer\"}, {\"name\": \"user_id\", \"dataType\": \"Integer\"}, {\"name\": \"order_date\", \"dataType\": \"Date\"}, {\"name\": \"status\", \"dataType\": \"String\"}]",
         "customExpression" : "concat(upper(column_name), '_',column_name)",
@@ -1480,11 +1452,11 @@
         "autoUpdateOnRun" : false
       },
       "componentInfo" : {
-        "gemId" : "MultiColumnRename_prophecy_basics",
+        "gemId" : "MultiColumnRename_DatabricksSqlBasics",
         "name" : "MultiColumnRename",
-        "projectName" : "prophecy_basics",
-        "sourceProjectName" : "prophecy_basics",
-        "sourceProjectVersion" : "0.0.1.dev0"
+        "projectName" : "DatabricksSqlBasics",
+        "sourceProjectName" : "DatabricksSqlBasics",
+        "sourceProjectVersion" : "0.0.4"
       }
     },
     "all_type_partitioned##w46tICDz" : {
@@ -1492,8 +1464,8 @@
       "component" : "Source",
       "metadata" : {
         "label" : "all_type_partitioned",
-        "x" : 340,
-        "y" : 240,
+        "x" : 260,
+        "y" : 500,
         "phase" : 0
       },
       "properties" : {
@@ -1581,8 +1553,8 @@
       "metadata" : {
         "label" : "Subgraph_2",
         "slug" : "Subgraph_2",
-        "x" : 1440,
-        "y" : -360,
+        "x" : 1340,
+        "y" : -20,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -2794,7 +2766,7 @@
       "metadata" : {
         "label" : "Filter_1asd",
         "slug" : "Filter_1asd",
-        "x" : 560,
+        "x" : 440,
         "y" : 300,
         "phase" : 0,
         "macroDependencies" : [ ],
@@ -2825,8 +2797,8 @@
       "metadata" : {
         "label" : "parent_transform_deduplicate_1",
         "slug" : "parent_transform_deduplicate_1",
-        "x" : 1600,
-        "y" : 320,
+        "x" : 1440,
+        "y" : 420,
         "phase" : 0,
         "macroDependencies" : [ ],
         "comment" : "Streamlines and removes duplicates from a dataset for improved data quality."
@@ -2875,19 +2847,10 @@
       "metadata" : {
         "label" : "Join_1",
         "x" : 1000,
-        "y" : 280,
+        "y" : 260,
         "phase" : 0,
         "macroDependencies" : [ ],
-        "comment" : "asd\n  asdasddasd",
-        "dataExplorerProps" : {
-          "filter" : [ {
-            "type" : "simple",
-            "lhs" : "c_int",
-            "operator" : ">",
-            "rhs" : "10"
-          } ],
-          "sort" : [ ]
-        }
+        "comment" : "asd\n  asdasddasd"
       },
       "properties" : {
         "conditions" : [ {
@@ -3011,8 +2974,8 @@
       "metadata" : {
         "label" : "env_uitesting_main_model_databricks_2",
         "slug" : "env_uitesting_main_model_databricks_2",
-        "x" : 900,
-        "y" : 160,
+        "x" : 860,
+        "y" : 100,
         "phase" : 0
       },
       "properties" : {
@@ -3037,8 +3000,8 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "Reformat_4",
-        "x" : 1320,
-        "y" : 380,
+        "x" : 1240,
+        "y" : 400,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -3064,8 +3027,8 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "all_type_partitioned_1",
-        "x" : 1060,
-        "y" : 20,
+        "x" : 880,
+        "y" : -280,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -3092,8 +3055,8 @@
       "metadata" : {
         "label" : "OrderBy_1",
         "slug" : "OrderBy_1",
-        "x" : 680,
-        "y" : 300,
+        "x" : 620,
+        "y" : 320,
         "phase" : 0,
         "macroDependencies" : [ ],
         "comment" : "Sorts filtered data by various criteria to prioritize specific records.",
@@ -3138,8 +3101,8 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "Reformat_3",
-        "x" : 1140,
-        "y" : 400,
+        "x" : 1120,
+        "y" : 440,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -3166,8 +3129,8 @@
       "metadata" : {
         "label" : "qa_all_not_null_1",
         "slug" : "qa_all_not_null_1",
-        "x" : 1780,
-        "y" : 360,
+        "x" : 1620,
+        "y" : 420,
         "phase" : 0,
         "macroDependencies" : [ "SQL_DatabricksParentProjectMain.qa_all_not_null" ],
         "comment" : "Ensures data integrity by checking for non-null values in a specific column of a dataset.",
@@ -3203,8 +3166,8 @@
       "metadata" : {
         "label" : "Transpose_1",
         "slug" : "Transpose_1",
-        "x" : 1440,
-        "y" : 120,
+        "x" : 1380,
+        "y" : 140,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -3212,36 +3175,24 @@
         "relation_name" : [ "MultiColumnRename_1" ],
         "_oldMacroProperties" : {
           "macroName" : "Transpose",
-          "projectName" : "prophecy_basics",
+          "projectName" : "DatabricksSqlBasics",
           "parameters" : [ {
             "name" : "relation_name",
-            "value" : "[\"MultiColumnRename_1\"]"
+            "value" : "['MultiColumnRename_1']"
           }, {
             "name" : "schema",
             "value" : "[{\"name\": \"pre_c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"pre_c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"pre_c_int\", \"dataType\": \"Integer\"}, {\"name\": \"pre_c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"pre_c_float\", \"dataType\": \"Float\"}, {\"name\": \"pre_c_double\", \"dataType\": \"Double\"}, {\"name\": \"pre_c_string\", \"dataType\": \"String\"}, {\"name\": \"pre_c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"pre_c_array\", \"dataType\": \"Array\"}, {\"name\": \"pre_c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"pre_p_string\", \"dataType\": \"String\"}, {\"name\": \"pre_id\", \"dataType\": \"Integer\"}, {\"name\": \"pre_user_id\", \"dataType\": \"Integer\"}, {\"name\": \"pre_order_date\", \"dataType\": \"Date\"}, {\"name\": \"pre_status\", \"dataType\": \"String\"}]"
-          }, {
-            "name" : "nameColumn",
-            "value" : "Name"
-          }, {
-            "name" : "valueColumn",
-            "value" : "Value"
           }, {
             "name" : "keyColumns",
             "value" : "[\"pre_c_int\", \"pre_c_bigint\", \"pre_c_string\", \"pre_c_smallint\", \"pre_c_tinyint\", \"pre_id\"]"
           }, {
             "name" : "dataColumns",
             "value" : "[\"pre_order_date\", \"pre_user_id\", \"pre_p_string\", \"p_int\", \"pre_status\", \"pre_c_struct\", \"pre_c_array\"]"
-          }, {
-            "name" : "customNames",
-            "value" : "false"
           } ]
         },
         "dataColumns" : [ "pre_order_date", "pre_user_id", "pre_p_string", "p_int", "pre_status", "pre_c_struct", "pre_c_array" ],
-        "customNames" : false,
         "schema" : "[{\"name\": \"pre_c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"pre_c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"pre_c_int\", \"dataType\": \"Integer\"}, {\"name\": \"pre_c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"pre_c_float\", \"dataType\": \"Float\"}, {\"name\": \"pre_c_double\", \"dataType\": \"Double\"}, {\"name\": \"pre_c_string\", \"dataType\": \"String\"}, {\"name\": \"pre_c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"pre_c_array\", \"dataType\": \"Array\"}, {\"name\": \"pre_c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"pre_p_string\", \"dataType\": \"String\"}, {\"name\": \"pre_id\", \"dataType\": \"Integer\"}, {\"name\": \"pre_user_id\", \"dataType\": \"Integer\"}, {\"name\": \"pre_order_date\", \"dataType\": \"Date\"}, {\"name\": \"pre_status\", \"dataType\": \"String\"}]",
-        "valueColumn" : "Value",
-        "keyColumns" : [ "pre_c_int", "pre_c_bigint", "pre_c_string", "pre_c_smallint", "pre_c_tinyint", "pre_id" ],
-        "nameColumn" : "Name"
+        "keyColumns" : [ "pre_c_int", "pre_c_bigint", "pre_c_string", "pre_c_smallint", "pre_c_tinyint", "pre_id" ]
       },
       "ports" : {
         "inputs" : [ {
@@ -3256,11 +3207,11 @@
         "autoUpdateOnRun" : false
       },
       "componentInfo" : {
-        "gemId" : "Transpose_prophecy_basics",
+        "gemId" : "Transpose_DatabricksSqlBasics",
         "name" : "Transpose",
-        "projectName" : "prophecy_basics",
-        "sourceProjectName" : "prophecy_basics",
-        "sourceProjectVersion" : "0.0.1.dev0"
+        "projectName" : "DatabricksSqlBasics",
+        "sourceProjectName" : "DatabricksSqlBasics",
+        "sourceProjectVersion" : "0.0.4"
       }
     },
     "kpb6Knw6pfAKRNh70mqXo$$Ro_Gk1_JPuf_xs-IuZy-N" : {
@@ -3269,8 +3220,8 @@
       "metadata" : {
         "label" : "DataCleansing_1",
         "slug" : "DataCleansing_1",
-        "x" : 1440,
-        "y" : 260,
+        "x" : 1480,
+        "y" : 280,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -3282,15 +3233,13 @@
         "removeRowNullAllCols" : true,
         "replaceNullTextFields" : true,
         "relation_name" : [ "TextToColumns_1" ],
-        "replaceNullDateWith" : "1970-01-01",
         "columnNames" : [ "c_tinyint", "c_smallint", "c_int", "c_boolean", "c_string", "p_string", "order_date", "id" ],
-        "replaceNullTimeFields" : false,
         "_oldMacroProperties" : {
           "macroName" : "DataCleansing",
-          "projectName" : "prophecy_basics",
+          "projectName" : "DatabricksSqlBasics",
           "parameters" : [ {
             "name" : "relation_name",
-            "value" : "[\"TextToColumns_1\"]"
+            "value" : "['TextToColumns_1']"
           }, {
             "name" : "schema",
             "value" : "[{\"name\": \"c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"c_int\", \"dataType\": \"Integer\"}, {\"name\": \"c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"c_float\", \"dataType\": \"Float\"}, {\"name\": \"c_double\", \"dataType\": \"Double\"}, {\"name\": \"c_string\", \"dataType\": \"String\"}, {\"name\": \"c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"c_array\", \"dataType\": \"Array\"}, {\"name\": \"c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"p_string\", \"dataType\": \"String\"}, {\"name\": \"id\", \"dataType\": \"Integer\"}, {\"name\": \"user_id\", \"dataType\": \"Integer\"}, {\"name\": \"order_date\", \"dataType\": \"Date\"}, {\"name\": \"status\", \"dataType\": \"String\"}, {\"name\": \"root_1_generated\", \"dataType\": \"String\"}]"
@@ -3333,27 +3282,13 @@
           }, {
             "name" : "removeRowNullAllCols",
             "value" : "true"
-          }, {
-            "name" : "replaceNullDateFields",
-            "value" : "false"
-          }, {
-            "name" : "replaceNullDateWith",
-            "value" : "1970-01-01"
-          }, {
-            "name" : "replaceNullTimeFields",
-            "value" : "false"
-          }, {
-            "name" : "replaceNullTimeWith",
-            "value" : "1970-01-01 00:00:00.0"
           } ]
         },
-        "replaceNullTimeWith" : "1970-01-01 00:00:00.0",
         "schema" : "[{\"name\": \"c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"c_int\", \"dataType\": \"Integer\"}, {\"name\": \"c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"c_float\", \"dataType\": \"Float\"}, {\"name\": \"c_double\", \"dataType\": \"Double\"}, {\"name\": \"c_string\", \"dataType\": \"String\"}, {\"name\": \"c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"c_array\", \"dataType\": \"Array\"}, {\"name\": \"c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"p_string\", \"dataType\": \"String\"}, {\"name\": \"id\", \"dataType\": \"Integer\"}, {\"name\": \"user_id\", \"dataType\": \"Integer\"}, {\"name\": \"order_date\", \"dataType\": \"Date\"}, {\"name\": \"status\", \"dataType\": \"String\"}, {\"name\": \"root_1_generated\", \"dataType\": \"String\"}]",
         "allWhiteSpace" : true,
         "removeTabsLineBreaksAndDuplicateWhitespace" : true,
         "modifyCase" : "makeUppercase",
         "cleanPunctuations" : true,
-        "replaceNullDateFields" : false,
         "cleanNumbers" : true,
         "replaceNullNumericWith" : 0
       },
@@ -3370,11 +3305,11 @@
         "autoUpdateOnRun" : false
       },
       "componentInfo" : {
-        "gemId" : "DataCleansing_prophecy_basics",
+        "gemId" : "DataCleansing_DatabricksSqlBasics",
         "name" : "DataCleansing",
-        "projectName" : "prophecy_basics",
-        "sourceProjectName" : "prophecy_basics",
-        "sourceProjectVersion" : "0.0.1.dev0"
+        "projectName" : "DatabricksSqlBasics",
+        "sourceProjectName" : "DatabricksSqlBasics",
+        "sourceProjectVersion" : "0.0.4"
       }
     }
   },
@@ -3517,6 +3452,12 @@
     "target" : "i29jFRkxbfV_1OO9cqbE5$$uWYJxNOoZNjLiJyempqoc",
     "targetPort" : "wJvbiqWeB11he9v6TnNcs$$JCyZxEy4tiAB8M0q6UoHd"
   }, {
+    "id" : "0iQnffN-i9tj-bpoyNv_R",
+    "source" : "AGlhavbtTmqhqRCk-Jiqc$$oKqDNk2iu9AyeRUEK8ls8",
+    "sourcePort" : "0KBg268Jhl3Iy0axitYET$$Ki5s70Vx76LwSXw8OmQK0",
+    "target" : "QFADVQYCvofejUVztLrjL$$1Fdzp5wVvhdBa_Ico22hz",
+    "targetPort" : "s4d6ik_b4mPzCfRrA5tm_$$OnTC2kMC6juPN4LaEsq5x"
+  }, {
     "id" : "5wfWw1Lx3vTGXA7Ff-H2V",
     "source" : "QFADVQYCvofejUVztLrjL$$1Fdzp5wVvhdBa_Ico22hz",
     "sourcePort" : "-3RkCCu32piQXyco11Hib$$CZRlc3Bl-YEXTsecs3hq-",
@@ -3529,29 +3470,23 @@
     "target" : "SQLStatement_2##USku5MrB",
     "targetPort" : "9sqxVmOdH8JuYyo7uRhEk$$oNiT8sOvvGZLKbBqhPhEN"
   }, {
+    "id" : "V5GQlT8rKbIZmY5c4P_kB",
+    "source" : "AGlhavbtTmqhqRCk-Jiqc$$oKqDNk2iu9AyeRUEK8ls8",
+    "sourcePort" : "0KBg268Jhl3Iy0axitYET$$Ki5s70Vx76LwSXw8OmQK0",
+    "target" : "CxgwzkdvegrsFEh-kRWyl$$vCkjpIbKhDI1aPj8iLYwH",
+    "targetPort" : "vdaSQss-gCnlGv2Se5_8h$$wBzBF-WRZTCrXh8ipI0Ot"
+  }, {
+    "id" : "SmHrxqovxoIJBo38iQ7qQ",
+    "source" : "CxgwzkdvegrsFEh-kRWyl$$vCkjpIbKhDI1aPj8iLYwH",
+    "sourcePort" : "75p1qoisKZuKf8r3I4IqI$$x-oloQbBRHcxSXY9aaURT",
+    "target" : "kpb6Knw6pfAKRNh70mqXo$$Ro_Gk1_JPuf_xs-IuZy-N",
+    "targetPort" : "y41RVHoPk257tceeDsZiz$$H7ka3hEmePJwUbirPAHWg"
+  }, {
     "id" : "p0WfvUk1H69nCYsFZvorU",
     "source" : "kpb6Knw6pfAKRNh70mqXo$$Ro_Gk1_JPuf_xs-IuZy-N",
     "sourcePort" : "ruRs7R5GERzvgjZALItjI$$q528S2_9LNXS3hw7mcEdG",
     "target" : "SQLStatement_2##USku5MrB",
     "targetPort" : "TfhrNw9HFHLZ7bvLEB7w6$$L-xFSIpyCaw723IzlIG9Z"
-  }, {
-    "id" : "UEkuKWMMRZKYVm246ru03",
-    "source" : "AGlhavbtTmqhqRCk-Jiqc$$oKqDNk2iu9AyeRUEK8ls8",
-    "sourcePort" : "0KBg268Jhl3Iy0axitYET$$Ki5s70Vx76LwSXw8OmQK0",
-    "target" : "QFADVQYCvofejUVztLrjL$$1Fdzp5wVvhdBa_Ico22hz",
-    "targetPort" : "s4d6ik_b4mPzCfRrA5tm_$$OnTC2kMC6juPN4LaEsq5x"
-  }, {
-    "id" : "M0R84k24VGVKdkBc8LqzH$$dOd5sm2n4W7M4Sa9x3kNg",
-    "source" : "sJjcUdPYqw1AiFB3awPqb$$E9WM9oSmhZvKhcdv6JGjv",
-    "sourcePort" : "jl-za3qA7jqDfEzxWTvKY$$S_7jCLuk_D-FDkuJ0Y0nx",
-    "target" : "kpb6Knw6pfAKRNh70mqXo$$Ro_Gk1_JPuf_xs-IuZy-N",
-    "targetPort" : "y41RVHoPk257tceeDsZiz$$H7ka3hEmePJwUbirPAHWg"
-  }, {
-    "id" : "oVPmxcAcp0k7MqTXziVTp",
-    "source" : "AGlhavbtTmqhqRCk-Jiqc$$oKqDNk2iu9AyeRUEK8ls8",
-    "sourcePort" : "0KBg268Jhl3Iy0axitYET$$Ki5s70Vx76LwSXw8OmQK0",
-    "target" : "sJjcUdPYqw1AiFB3awPqb$$E9WM9oSmhZvKhcdv6JGjv",
-    "targetPort" : "XXARKgUkl6aDcav8CbmOZ$$Wx2ktP-aLvTnvRMe3yzHp"
   } ],
   "component" : "Model"
 }

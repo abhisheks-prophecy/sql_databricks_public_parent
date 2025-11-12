@@ -644,8 +644,8 @@ qa_all_not_null_1 AS (
 MultiColumnRename_1 AS (
 
   {{
-    prophecy_basics.MultiColumnRename(
-      ['Limit_2'], 
+    DatabricksSqlBasics.MultiColumnRename(
+      'Limit_2', 
       [
         'c_tinyint', 
         'c_smallint', 
@@ -657,11 +657,11 @@ MultiColumnRename_1 AS (
         'status', 
         'p_string', 
         'c_boolean', 
+        'c_double', 
         'c_string', 
         'c_float', 
         'c_array', 
-        'c_struct', 
-        'c_double'
+        'c_struct'
       ], 
       'editPrefixSuffix', 
       [
@@ -693,8 +693,8 @@ MultiColumnRename_1 AS (
 Transpose_1 AS (
 
   {{
-    prophecy_basics.Transpose(
-      ['MultiColumnRename_1'], 
+    DatabricksSqlBasics.Transpose(
+      'MultiColumnRename_1', 
       ['pre_c_int', 'pre_c_bigint', 'pre_c_string', 'pre_c_smallint', 'pre_c_tinyint', 'pre_id'], 
       [
         'pre_order_date', 
@@ -724,8 +724,7 @@ Transpose_1 AS (
         'pre_user_id', 
         'pre_order_date', 
         'pre_status'
-      ], 
-      false
+      ]
     )
   }}
 
@@ -734,8 +733,8 @@ Transpose_1 AS (
 TextToColumns_1 AS (
 
   {{
-    prophecy_basics.TextToColumns(
-      ['Limit_2'], 
+    DatabricksSqlBasics.TextToColumns(
+      'Limit_2', 
       'c_string', 
       "a", 
       'splitColumns', 
@@ -752,8 +751,8 @@ TextToColumns_1 AS (
 DataCleansing_1 AS (
 
   {{
-    prophecy_basics.DataCleansing(
-      ['TextToColumns_1'], 
+    DatabricksSqlBasics.DataCleansing(
+      'TextToColumns_1', 
       [
         { "name": "c_tinyint", "dataType": "TinyInt" }, 
         { "name": "c_smallint", "dataType": "SmallInt" }, 
