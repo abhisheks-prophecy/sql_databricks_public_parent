@@ -645,7 +645,7 @@ MultiColumnRename_1 AS (
 
   {{
     prophecy_basics.MultiColumnRename(
-      'Limit_2', 
+      ['Limit_2'], 
       [
         'c_tinyint', 
         'c_smallint', 
@@ -694,7 +694,7 @@ Transpose_1 AS (
 
   {{
     prophecy_basics.Transpose(
-      'MultiColumnRename_1', 
+      ['MultiColumnRename_1'], 
       ['pre_c_int', 'pre_c_bigint', 'pre_c_string', 'pre_c_smallint', 'pre_c_tinyint', 'pre_id'], 
       [
         'pre_order_date', 
@@ -724,7 +724,8 @@ Transpose_1 AS (
         'pre_user_id', 
         'pre_order_date', 
         'pre_status'
-      ]
+      ], 
+      false
     )
   }}
 
@@ -734,7 +735,7 @@ TextToColumns_1 AS (
 
   {{
     prophecy_basics.TextToColumns(
-      'Limit_2', 
+      ['Limit_2'], 
       'c_string', 
       "a", 
       'splitColumns', 
@@ -752,7 +753,7 @@ DataCleansing_1 AS (
 
   {{
     prophecy_basics.DataCleansing(
-      'TextToColumns_1', 
+      ['TextToColumns_1'], 
       [
         { "name": "c_tinyint", "dataType": "TinyInt" }, 
         { "name": "c_smallint", "dataType": "SmallInt" }, 

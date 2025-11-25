@@ -2846,8 +2846,8 @@
       "component" : "Join",
       "metadata" : {
         "label" : "Join_1",
-        "x" : 1000,
-        "y" : 260,
+        "x" : 940,
+        "y" : 600,
         "phase" : 0,
         "macroDependencies" : [ ],
         "comment" : "asd\n  asdasddasd"
