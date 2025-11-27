@@ -906,8 +906,6 @@ sqlOrchestratorPipelines:
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
-    - models/sanity_parent_orchestration_pipeline_1/schema.yml
-    - models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql
     - .prophecy/ide/pipelines/sanity_parent_orchestration_pipeline_1.json
     - pipelines/sanity_parent_orchestration_pipeline_1.py
     createdAt: '2025-03-17 06:33:23'
