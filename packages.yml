@@ -6,6 +6,6 @@ packages:
   version:
   - ">=0.7.0"
   - "<0.8.0"
-- revision: "1.0.4.dev3"
+- revision: "1.0.4.dev4"
   git: "https://github.com/prophecy-io/prophecy-basics"
   subdirectory: ""
