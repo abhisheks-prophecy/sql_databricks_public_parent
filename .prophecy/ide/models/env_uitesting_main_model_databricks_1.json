@@ -126,8 +126,8 @@
       "component" : "Source",
       "metadata" : {
         "label" : "all_type_non_partitioned",
-        "x" : 380,
-        "y" : -120,
+        "x" : 220,
+        "y" : 120,
         "phase" : 0
       },
       "properties" : {
@@ -3027,8 +3027,8 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "all_type_partitioned_1",
-        "x" : 880,
-        "y" : -140,
+        "x" : 840,
+        "y" : -100,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -3178,21 +3178,33 @@
           "projectName" : "prophecy_basics",
           "parameters" : [ {
             "name" : "relation_name",
-            "value" : "['MultiColumnRename_1']"
+            "value" : "[\"MultiColumnRename_1\"]"
           }, {
             "name" : "schema",
             "value" : "[{\"name\": \"pre_c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"pre_c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"pre_c_int\", \"dataType\": \"Integer\"}, {\"name\": \"pre_c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"pre_c_float\", \"dataType\": \"Float\"}, {\"name\": \"pre_c_double\", \"dataType\": \"Double\"}, {\"name\": \"pre_c_string\", \"dataType\": \"String\"}, {\"name\": \"pre_c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"pre_c_array\", \"dataType\": \"Array\"}, {\"name\": \"pre_c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"pre_p_string\", \"dataType\": \"String\"}, {\"name\": \"pre_id\", \"dataType\": \"Integer\"}, {\"name\": \"pre_user_id\", \"dataType\": \"Integer\"}, {\"name\": \"pre_order_date\", \"dataType\": \"Date\"}, {\"name\": \"pre_status\", \"dataType\": \"String\"}]"
+          }, {
+            "name" : "nameColumn",
+            "value" : "Name"
+          }, {
+            "name" : "valueColumn",
+            "value" : "Value"
           }, {
             "name" : "keyColumns",
             "value" : "[\"pre_c_int\", \"pre_c_bigint\", \"pre_c_string\", \"pre_c_smallint\", \"pre_c_tinyint\", \"pre_id\"]"
           }, {
             "name" : "dataColumns",
             "value" : "[\"pre_order_date\", \"pre_user_id\", \"pre_p_string\", \"p_int\", \"pre_status\", \"pre_c_struct\", \"pre_c_array\"]"
+          }, {
+            "name" : "customNames",
+            "value" : "false"
           } ]
         },
         "dataColumns" : [ "pre_order_date", "pre_user_id", "pre_p_string", "p_int", "pre_status", "pre_c_struct", "pre_c_array" ],
+        "customNames" : false,
         "schema" : "[{\"name\": \"pre_c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"pre_c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"pre_c_int\", \"dataType\": \"Integer\"}, {\"name\": \"pre_c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"pre_c_float\", \"dataType\": \"Float\"}, {\"name\": \"pre_c_double\", \"dataType\": \"Double\"}, {\"name\": \"pre_c_string\", \"dataType\": \"String\"}, {\"name\": \"pre_c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"pre_c_array\", \"dataType\": \"Array\"}, {\"name\": \"pre_c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"pre_p_string\", \"dataType\": \"String\"}, {\"name\": \"pre_id\", \"dataType\": \"Integer\"}, {\"name\": \"pre_user_id\", \"dataType\": \"Integer\"}, {\"name\": \"pre_order_date\", \"dataType\": \"Date\"}, {\"name\": \"pre_status\", \"dataType\": \"String\"}]",
-        "keyColumns" : [ "pre_c_int", "pre_c_bigint", "pre_c_string", "pre_c_smallint", "pre_c_tinyint", "pre_id" ]
+        "valueColumn" : "Value",
+        "keyColumns" : [ "pre_c_int", "pre_c_bigint", "pre_c_string", "pre_c_smallint", "pre_c_tinyint", "pre_id" ],
+        "nameColumn" : "Name"
       },
       "ports" : {
         "inputs" : [ {
@@ -3233,13 +3245,15 @@
         "removeRowNullAllCols" : true,
         "replaceNullTextFields" : true,
         "relation_name" : [ "TextToColumns_1" ],
+        "replaceNullDateWith" : "1970-01-01",
         "columnNames" : [ "c_tinyint", "c_smallint", "c_int", "c_boolean", "c_string", "p_string", "order_date", "id" ],
+        "replaceNullTimeFields" : false,
         "_oldMacroProperties" : {
           "macroName" : "DataCleansing",
           "projectName" : "prophecy_basics",
           "parameters" : [ {
             "name" : "relation_name",
-            "value" : "['TextToColumns_1']"
+            "value" : "[\"TextToColumns_1\"]"
           }, {
             "name" : "schema",
             "value" : "[{\"name\": \"c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"c_int\", \"dataType\": \"Integer\"}, {\"name\": \"c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"c_float\", \"dataType\": \"Float\"}, {\"name\": \"c_double\", \"dataType\": \"Double\"}, {\"name\": \"c_string\", \"dataType\": \"String\"}, {\"name\": \"c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"c_array\", \"dataType\": \"Array\"}, {\"name\": \"c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"p_string\", \"dataType\": \"String\"}, {\"name\": \"id\", \"dataType\": \"Integer\"}, {\"name\": \"user_id\", \"dataType\": \"Integer\"}, {\"name\": \"order_date\", \"dataType\": \"Date\"}, {\"name\": \"status\", \"dataType\": \"String\"}, {\"name\": \"root_1_generated\", \"dataType\": \"String\"}]"
@@ -3282,13 +3296,27 @@
           }, {
             "name" : "removeRowNullAllCols",
             "value" : "true"
+          }, {
+            "name" : "replaceNullDateFields",
+            "value" : "false"
+          }, {
+            "name" : "replaceNullDateWith",
+            "value" : "1970-01-01"
+          }, {
+            "name" : "replaceNullTimeFields",
+            "value" : "false"
+          }, {
+            "name" : "replaceNullTimeWith",
+            "value" : "1970-01-01 00:00:00.0"
           } ]
         },
+        "replaceNullTimeWith" : "1970-01-01 00:00:00.0",
         "schema" : "[{\"name\": \"c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"c_int\", \"dataType\": \"Integer\"}, {\"name\": \"c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"c_float\", \"dataType\": \"Float\"}, {\"name\": \"c_double\", \"dataType\": \"Double\"}, {\"name\": \"c_string\", \"dataType\": \"String\"}, {\"name\": \"c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"c_array\", \"dataType\": \"Array\"}, {\"name\": \"c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"p_string\", \"dataType\": \"String\"}, {\"name\": \"id\", \"dataType\": \"Integer\"}, {\"name\": \"user_id\", \"dataType\": \"Integer\"}, {\"name\": \"order_date\", \"dataType\": \"Date\"}, {\"name\": \"status\", \"dataType\": \"String\"}, {\"name\": \"root_1_generated\", \"dataType\": \"String\"}]",
         "allWhiteSpace" : true,
         "removeTabsLineBreaksAndDuplicateWhitespace" : true,
         "modifyCase" : "makeUppercase",
         "cleanPunctuations" : true,
+        "replaceNullDateFields" : false,
         "cleanNumbers" : true,
         "replaceNullNumericWith" : 0
       },

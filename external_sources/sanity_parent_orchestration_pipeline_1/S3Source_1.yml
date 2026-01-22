@@ -1,0 +1,45 @@
+fields:
+- dataType:
+    type: "Bigint"
+  description: "The year in which the data was collected."
+  name: "Year"
+- dataType:
+    type: "String"
+  description: "The classification of industries based on the New Zealand Standard\
+    \ Industry Output Classification."
+  name: "Industry_aggregation_NZSIOC"
+- dataType:
+    type: "String"
+  description: "Code representing the industry classification according to NZSIOC\
+    \ standards"
+  name: "Industry_code_NZSIOC"
+- dataType:
+    type: "String"
+  description: "Name of the industry as per the NZSIOC classification"
+  name: "Industry_name_NZSIOC"
+- dataType:
+    type: "String"
+  description: "The measurement units used for the data values"
+  name: "Units"
+- dataType:
+    type: "String"
+  description: "Code representing the specific variable being measured"
+  name: "Variable_code"
+- dataType:
+    type: "String"
+  description: "Name of the variable being measured in the dataset"
+  name: "Variable_name"
+- dataType:
+    type: "String"
+  description: "Category classification of the variable being measured"
+  name: "Variable_category"
+- dataType:
+    type: "String"
+  description: "The measured value associated with the industry data"
+  name: "Value"
+- dataType:
+    type: "String"
+  description: "The code representing the industry classification according to ANZSIC\
+    \ 2006 standards."
+  name: "Industry_code_ANZSIC06"
+providerType: "arrow"

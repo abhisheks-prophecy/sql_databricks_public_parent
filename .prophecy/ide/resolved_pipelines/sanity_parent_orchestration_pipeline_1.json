@@ -384,7 +384,8 @@
     "source" : "_vSrbpCqSxQ_Qtfm8A80A",
     "sourcePort" : "0a48bb57-1edf-490a-a883-7ebec8a026f2",
     "target" : "S3Source_1_0a48bb57-1edf-490a-a883-7ebec8a026f2",
-    "targetPort" : "input_port_0"
+    "targetPort" : "input_port_0",
+    "isWireless" : false
   }, {
     "id" : "icPEC2ohz8kZNfMYNRKyA",
     "source" : "hM_3DdNi-bqq8MhaIN0M7$$r5jocjn56mDoXiPocpU0m",
@@ -402,7 +403,8 @@
     "source" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
     "sourcePort" : "sanity_parent_orchestration_pipeline_1__Join_1_out_0",
     "target" : "bSp2BAeazUMeXNYr3jMIj$$F2uUDa4J2gWeJ6VJyyG6T",
-    "targetPort" : "JOXtSL4dHNARGh2BndgWS$$id-YxQ96Saec_RYzWsrGD"
+    "targetPort" : "JOXtSL4dHNARGh2BndgWS$$id-YxQ96Saec_RYzWsrGD",
+    "isWireless" : false
   } ],
   "component" : "Pipeline"
 }
