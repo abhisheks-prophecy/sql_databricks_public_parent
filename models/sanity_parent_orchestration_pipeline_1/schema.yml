@@ -1,0 +1,6 @@
+---
+version: 2
+models:
+- name: "sanity_parent_orchestration_pipeline_1__Join_1"
+  tags:
+  - "prophecy_temp"

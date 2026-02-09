@@ -15,7 +15,8 @@
       "emails" : "",
       "onStart" : false,
       "onSuccess" : false,
-      "onFailure" : false
+      "onFailure" : false,
+      "onDurationWarningThresholdExceeded" : false
     },
     "maxConcurrentRuns" : 1,
     "processDefaultSettings" : {
@@ -25,7 +26,8 @@
         "emails" : "",
         "onStart" : false,
         "onSuccess" : false,
-        "onFailure" : false
+        "onFailure" : false,
+        "onDurationWarningThresholdExceeded" : false
       }
     }
   },
@@ -65,11 +67,13 @@
         "runOnlyModel" : "true",
         "loadingModels" : false,
         "fullRefresh" : true,
+        "entityName" : "env_uitesting_main_model_databricks_1",
         "noSendAnonymousUsageStats" : true,
         "profile" : "run_profile",
         "sqlFabricId" : "7",
         "gitEntityValue" : "dev_staging",
         "execDeps" : true,
+        "sqlProjectType" : "databricks",
         "execTest" : false,
         "currentProjectModels" : [ {
           "label" : "env_uitesting_main_model_databricks_2",
@@ -82,7 +86,16 @@
           "id" : "66/.prophecy/metadata/sqlmodels/env_uitesting_main_model_databricks_1",
           "name" : "env_uitesting_main_model_databricks_1"
         } ]
-      }
+      },
+      "conditional" : {
+        "runIf" : "ALL_SUCCESS",
+        "forEach" : false,
+        "forEachConfig" : "",
+        "forEachConcurrency" : 1,
+        "forEachInputVariable" : "",
+        "forEachIterationCount" : null
+      },
+      "parent" : null
     },
     "6E6zUSrOwMKPls7kds21D$$AwjzAeTzNBJsdyentMTIX" : {
       "id" : "6E6zUSrOwMKPls7kds21D$$AwjzAeTzNBJsdyentMTIX",
@@ -109,12 +122,22 @@
           "emails" : "",
           "onStart" : false,
           "onSuccess" : false,
-          "onFailure" : false
+          "onFailure" : false,
+          "onDurationWarningThresholdExceeded" : false
         }
       },
       "properties" : {
         "code" : "print(\"hello sir\")"
-      }
+      },
+      "conditional" : {
+        "runIf" : "ALL_SUCCESS",
+        "forEach" : false,
+        "forEachConfig" : "",
+        "forEachConcurrency" : 1,
+        "forEachInputVariable" : "",
+        "forEachIterationCount" : null
+      },
+      "parent" : null
     }
   },
   "connections" : [ {

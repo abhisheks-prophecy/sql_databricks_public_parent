@@ -208,7 +208,7 @@
         "phase" : 0
       },
       "properties" : {
-        "columnsSelector" : [ "3GJQ5BE6pT_AekQrGQJ8H$$Jy_WVb-XM5VtupVwD5uNZ##Year", "3GJQ5BE6pT_AekQrGQJ8H$$Jy_WVb-XM5VtupVwD5uNZ##Industry_aggregation_NZSIOC", "3GJQ5BE6pT_AekQrGQJ8H$$Jy_WVb-XM5VtupVwD5uNZ##Industry_code_NZSIOC", "3GJQ5BE6pT_AekQrGQJ8H$$Jy_WVb-XM5VtupVwD5uNZ##Industry_name_NZSIOC", "3GJQ5BE6pT_AekQrGQJ8H$$Jy_WVb-XM5VtupVwD5uNZ##Units", "3GJQ5BE6pT_AekQrGQJ8H$$Jy_WVb-XM5VtupVwD5uNZ##Variable_code", "3GJQ5BE6pT_AekQrGQJ8H$$Jy_WVb-XM5VtupVwD5uNZ##Variable_name", "3GJQ5BE6pT_AekQrGQJ8H$$Jy_WVb-XM5VtupVwD5uNZ##Variable_category", "3GJQ5BE6pT_AekQrGQJ8H$$Jy_WVb-XM5VtupVwD5uNZ##Value", "3GJQ5BE6pT_AekQrGQJ8H$$Jy_WVb-XM5VtupVwD5uNZ##Industry_code_ANZSIC06" ],
+        "columnsSelector" : [ ],
         "expressions" : [ {
           "expression" : {
             "expression" : "Year"
@@ -303,7 +303,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "BDQjFitT9s3pGzBLcqIn8$$xTrJUaCuCn5HtErMyJ8I6",
-          "slug" : "in0"
+          "slug" : "SetOperation_1"
         } ],
         "outputs" : [ {
           "id" : "4-bMiI15i2WdKXxwsrDn8$$a8xqq7j9cmS8Js6jgm_Jn",
@@ -322,7 +322,7 @@
         "phase" : 0
       },
       "properties" : {
-        "columnsSelector" : [ "hbC8g47rNx88OHrTIVAF-$$mGhAMktxY-5M3l8aoo0wC##Year", "hbC8g47rNx88OHrTIVAF-$$mGhAMktxY-5M3l8aoo0wC##Industry_aggregation_NZSIOC" ],
+        "columnsSelector" : [ ],
         "orders" : [ {
           "expression" : {
             "expression" : "Year"
@@ -545,7 +545,7 @@
           "expression" : ""
         },
         "activeTab" : "aggregate",
-        "columnsSelector" : [ "J8BuGsnd84bJrXkbmTQpD$$M9iD2yScm3RWfbp_Z6lYA##Year", "J8BuGsnd84bJrXkbmTQpD$$M9iD2yScm3RWfbp_Z6lYA##Industry_aggregation_NZSIOC", "J8BuGsnd84bJrXkbmTQpD$$M9iD2yScm3RWfbp_Z6lYA##Industry_code_NZSIOC", "J8BuGsnd84bJrXkbmTQpD$$M9iD2yScm3RWfbp_Z6lYA##Industry_name_NZSIOC", "J8BuGsnd84bJrXkbmTQpD$$M9iD2yScm3RWfbp_Z6lYA##Units", "J8BuGsnd84bJrXkbmTQpD$$M9iD2yScm3RWfbp_Z6lYA##Variable_code", "J8BuGsnd84bJrXkbmTQpD$$M9iD2yScm3RWfbp_Z6lYA##Variable_name", "J8BuGsnd84bJrXkbmTQpD$$M9iD2yScm3RWfbp_Z6lYA##Variable_category", "J8BuGsnd84bJrXkbmTQpD$$M9iD2yScm3RWfbp_Z6lYA##Value", "J8BuGsnd84bJrXkbmTQpD$$M9iD2yScm3RWfbp_Z6lYA##Industry_code_ANZSIC06" ],
+        "columnsSelector" : [ ],
         "groupBy" : [ {
           "expression" : {
             "expression" : "Year"

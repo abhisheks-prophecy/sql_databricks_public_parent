@@ -23,60 +23,6 @@
     }
   },
   "processes" : {
-    "S3Source_1_0a48bb57-1edf-490a-a883-7ebec8a026f2" : {
-      "id" : "S3Source_1_0a48bb57-1edf-490a-a883-7ebec8a026f2",
-      "component" : "Dataset",
-      "metadata" : {
-        "label" : "S3Source_1"
-      },
-      "properties" : {
-        "label" : "S3Source_1",
-        "table" : {
-          "name" : "{{ prophecy_tmp_source('sanity_parent_orchestration_pipeline_1', 'S3Source_1') }}",
-          "sourceType" : "UnreferencedSource"
-        }
-      },
-      "visualMetaInfo" : {
-        "isTemporaryTable" : true,
-        "tempTableInfo" : {
-          "pipelineName" : "sanity_parent_orchestration_pipeline_1",
-          "upstreamProcessSlug" : "S3Source_1",
-          "tempTableSuffixOpt" : ""
-        }
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "input_port_0",
-          "slug" : "input_port_0"
-        } ],
-        "outputs" : [ {
-          "id" : "output_port_0",
-          "slug" : "output_port_0",
-          "dataExplorerProps" : {
-            "sorts" : [ ],
-            "filter" : {
-              "type" : "Composite",
-              "op" : {
-                "type" : "AND"
-              },
-              "filters" : [ {
-                "lhs" : {
-                  "type" : "Field",
-                  "value" : "Variable_category"
-                },
-                "type" : "Binary",
-                "op" : "=",
-                "rhs" : {
-                  "type" : "Literal",
-                  "value" : "'Financial performance'"
-                }
-              } ]
-            }
-          }
-        } ],
-        "isCustomOutputSchema" : false
-      }
-    },
     "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3" : {
       "id" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
       "component" : "Model",
@@ -380,31 +326,23 @@
     }
   },
   "connections" : [ {
-    "id" : "conn__vSrbpCqSxQ_Qtfm8A80A_0a48bb57-1edf-490a-a883-7ebec8a026f2_S3Source_1_0a48bb57-1edf-490a-a883-7ebec8a026f2",
+    "id" : "7p3eDzmf0Fbe6oIbO2AgC$$_L2RSYEWv1Q6StcawUyNF",
     "source" : "_vSrbpCqSxQ_Qtfm8A80A",
     "sourcePort" : "0a48bb57-1edf-490a-a883-7ebec8a026f2",
-    "target" : "S3Source_1_0a48bb57-1edf-490a-a883-7ebec8a026f2",
-    "targetPort" : "input_port_0",
-    "isWireless" : false
+    "target" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
+    "targetPort" : "sanity_parent_orchestration_pipeline_1__Join_1_in_0"
   }, {
     "id" : "icPEC2ohz8kZNfMYNRKyA",
     "source" : "hM_3DdNi-bqq8MhaIN0M7$$r5jocjn56mDoXiPocpU0m",
     "sourcePort" : "uPesk6KgnrinfnkG-nutq$$0HwNCPb80A3p__aqZomaS",
     "target" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
-    "targetPort" : "sanity_parent_orchestration_pipeline_1__Join_1_in_0"
+    "targetPort" : "sanity_parent_orchestration_pipeline_1__Join_1_in_1"
   }, {
-    "id" : "7p3eDzmf0Fbe6oIbO2AgC$$_L2RSYEWv1Q6StcawUyNF",
-    "source" : "S3Source_1_0a48bb57-1edf-490a-a883-7ebec8a026f2",
-    "sourcePort" : "output_port_0",
-    "target" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
-    "targetPort" : "sanity_parent_orchestration_pipeline_1__Join_1_in_2"
-  }, {
-    "id" : "conn_jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3_JOXtSL4dHNARGh2BndgWS$$id-YxQ96Saec_RYzWsrGD",
+    "id" : "sBaUctCzzvbc3Re2qZmrc$$mMSVIbjjvye9Nj0dNZkHJ",
     "source" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
     "sourcePort" : "sanity_parent_orchestration_pipeline_1__Join_1_out_0",
     "target" : "bSp2BAeazUMeXNYr3jMIj$$F2uUDa4J2gWeJ6VJyyG6T",
-    "targetPort" : "JOXtSL4dHNARGh2BndgWS$$id-YxQ96Saec_RYzWsrGD",
-    "isWireless" : false
+    "targetPort" : "JOXtSL4dHNARGh2BndgWS$$id-YxQ96Saec_RYzWsrGD"
   } ],
   "component" : "Pipeline"
 }
