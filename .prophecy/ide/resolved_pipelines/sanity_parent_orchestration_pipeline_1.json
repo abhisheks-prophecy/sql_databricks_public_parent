@@ -36,7 +36,8 @@
       "visualMetaInfo" : {
         "visualProcessIds" : [ "Join_1_pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH", "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3", "hM_3DdNi-bqq8MhaIN0M7$$r5jocjn56mDoXiPocpU0m", "mh1Xl4VTWr1LpvUW01mMu$$xKu6DdxJzT6a32GuNlmmN", "vEkqVS8Z1AmXW7KABrJVw$$pXjeU3HhbDpmJUgANqYTJ", "ChOk4BugA7oTy_Cy4iIFX$$Ysy_XjUnCbgHoLvcxZXfQ", "SVTxwjzsOk-WJW6HXIFrV$$AQiyLagn_deyQK_qpZXsQ", "m9RlZSSA59AYGHcOZtxpI$$O0r3hyw-0nCleid4yXPYw", "S3Source_1_0a48bb57-1edf-490a-a883-7ebec8a026f2" ],
         "type" : "ephemeral",
-        "isTemporaryTable" : true
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "Join_1_pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH" ]
       },
       "ports" : {
         "inputs" : [ {
