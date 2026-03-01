@@ -297,7 +297,9 @@
       "metadata" : {
         "label" : "send_danger_email",
         "x" : 1540,
-        "y" : 180
+        "y" : 180,
+        "comment" : "Sends a monitored alert email with attached sanity data to specified recipients.",
+        "autoUpdateComment" : true
       },
       "properties" : {
         "body" : "This is a dangerous email from sanity pipeline for parent databricks project",
@@ -310,7 +312,7 @@
         "connection" : {
           "kind" : "smtp",
           "properties" : {
-            "id" : "smtp"
+            "id" : "smtp_1"
           },
           "type" : "connector"
         },

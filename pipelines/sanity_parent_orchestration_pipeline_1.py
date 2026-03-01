@@ -34,7 +34,7 @@ with Pipeline(args) as pipeline:
           to = ["abhisheks@prophecy.io"],
           bcc = ["abhisheks+bcc@prophecy.io"],
           cc = ["abhisheks+cc@prophecy.io"],
-          connection = "smtp"
+          connection = "smtp_1"
         ),
         output_ports = None
     )
