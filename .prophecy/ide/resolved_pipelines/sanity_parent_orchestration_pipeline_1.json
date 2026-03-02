@@ -298,7 +298,7 @@
         "label" : "send_danger_email",
         "x" : 1540,
         "y" : 180,
-        "comment" : "Sends a monitored alert email with attached sanity data to specified recipients.",
+        "comment" : "Sends a cautionary email from a sanity check, including data attachment for parent Databricks project.",
         "autoUpdateComment" : true
       },
       "properties" : {
@@ -312,7 +312,7 @@
         "connection" : {
           "kind" : "smtp",
           "properties" : {
-            "id" : "smtp_1"
+            "id" : "smtp"
           },
           "type" : "connector"
         },
