@@ -259,14 +259,6 @@
     "dependencies" : { },
     "prophecyProjectDependencies" : { }
   },
-  "entitiesToSync" : [ {
-    "name" : "env_uitesting_can_corrupt",
-    "type" : "Model",
-    "syncedOnce" : false
-  }, {
-    "name" : "env_uitesting_main_model_databricks_1",
-    "type" : "Model",
-    "syncedOnce" : false
-  } ],
+  "entitiesToSync" : [ ],
   "frontEndLanguage" : "sql"
 }
