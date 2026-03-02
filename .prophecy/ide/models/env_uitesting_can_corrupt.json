@@ -2,8 +2,8 @@
   "id" : "env_uitesting_can_corrupt",
   "metainfo" : {
     "label" : "env_uitesting_can_corrupt",
-    "autoLayout" : true,
-    "staleState" : "none",
+    "autoLayout" : false,
+    "staleState" : "file",
     "sourceSuggestions" : {
       "sources" : [ ]
     },
@@ -20,6 +20,8 @@
       "component" : "Source",
       "metadata" : {
         "label" : "all_type_partitioned",
+        "x" : 20,
+        "y" : 220,
         "phase" : 0,
         "isLabelGrayed" : false
       },
@@ -46,6 +48,8 @@
       "component" : "Source",
       "metadata" : {
         "label" : "all_type_non_partitioned",
+        "x" : 20,
+        "y" : 20,
         "phase" : 0,
         "isLabelGrayed" : false
       },
@@ -72,6 +76,8 @@
       "component" : "Join",
       "metadata" : {
         "label" : "Join_1",
+        "x" : 220,
+        "y" : 120,
         "phase" : 0,
         "macroDependencies" : [ "SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column", "SQL_DatabricksParentProjectMain.qa_boolean_macro" ],
         "isLabelGrayed" : false
@@ -201,6 +207,8 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "Reformat_2",
+        "x" : 420,
+        "y" : 120,
         "phase" : 0,
         "macroDependencies" : [ ],
         "isLabelGrayed" : false
@@ -318,6 +326,8 @@
       "component" : "TargetModel",
       "metadata" : {
         "label" : "env_uitesting_can_corrupt",
+        "x" : 820,
+        "y" : 120,
         "phase" : 0,
         "isLabelGrayed" : false
       },
@@ -351,6 +361,8 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "Reformat_1",
+        "x" : 620,
+        "y" : 120,
         "phase" : 0,
         "macroDependencies" : [ ],
         "isLabelGrayed" : false
