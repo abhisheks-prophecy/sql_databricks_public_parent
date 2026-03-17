@@ -1,0 +1,351 @@
+{
+  "id" : "sanity_parent_orchestration_pipeline_1",
+  "metainfo" : {
+    "label" : "sanity_parent_orchestration_pipeline_1",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "processesVsModelFiles" : {
+      "S3Source_1_0a48bb57-1edf-490a-a883-7ebec8a026f2" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
+      "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
+      "Join_1_pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
+      "vEkqVS8Z1AmXW7KABrJVw$$pXjeU3HhbDpmJUgANqYTJ" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
+      "SVTxwjzsOk-WJW6HXIFrV$$AQiyLagn_deyQK_qpZXsQ" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
+      "mh1Xl4VTWr1LpvUW01mMu$$xKu6DdxJzT6a32GuNlmmN" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
+      "m9RlZSSA59AYGHcOZtxpI$$O0r3hyw-0nCleid4yXPYw" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
+      "ChOk4BugA7oTy_Cy4iIFX$$Ysy_XjUnCbgHoLvcxZXfQ" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
+      "hM_3DdNi-bqq8MhaIN0M7$$r5jocjn56mDoXiPocpU0m" : "models/sanity_parent_orchestration_pipeline_1/env_uitesting_main_model_databricks_1.sql"
+    }
+  },
+  "processes" : {
+    "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3" : {
+      "id" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "sanity_parent_orchestration_pipeline_1__Join_1",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "sanity_parent_orchestration_pipeline_1__Join_1"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Join_1_pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH", "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3", "hM_3DdNi-bqq8MhaIN0M7$$r5jocjn56mDoXiPocpU0m", "mh1Xl4VTWr1LpvUW01mMu$$xKu6DdxJzT6a32GuNlmmN", "vEkqVS8Z1AmXW7KABrJVw$$pXjeU3HhbDpmJUgANqYTJ", "ChOk4BugA7oTy_Cy4iIFX$$Ysy_XjUnCbgHoLvcxZXfQ", "SVTxwjzsOk-WJW6HXIFrV$$AQiyLagn_deyQK_qpZXsQ", "m9RlZSSA59AYGHcOZtxpI$$O0r3hyw-0nCleid4yXPYw", "S3Source_1_0a48bb57-1edf-490a-a883-7ebec8a026f2" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true,
+        "lastNodeProcessIds" : [ "Join_1_pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "sanity_parent_orchestration_pipeline_1__Join_1_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "sanity_parent_orchestration_pipeline_1__Join_1_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "sanity_parent_orchestration_pipeline_1__Join_1_in_2",
+          "slug" : "in_2"
+        } ],
+        "outputs" : [ {
+          "id" : "sanity_parent_orchestration_pipeline_1__Join_1_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "_vSrbpCqSxQ_Qtfm8A80A" : {
+      "id" : "_vSrbpCqSxQ_Qtfm8A80A",
+      "component" : "OrchestrationSource",
+      "kind" : "S3Source",
+      "metadata" : {
+        "label" : "S3Source_1",
+        "x" : 220,
+        "y" : 180,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "s3",
+          "properties" : {
+            "id" : "s3"
+          },
+          "type" : "connector"
+        },
+        "format" : {
+          "kind" : "csv",
+          "properties" : {
+            "header" : true,
+            "schema" : {
+              "fields" : [ {
+                "dataType" : {
+                  "type" : "Bigint"
+                },
+                "description" : "The year in which the data was collected.",
+                "name" : "Year"
+              }, {
+                "dataType" : {
+                  "type" : "String"
+                },
+                "description" : "The classification of industries based on the New Zealand Standard Industry Output Classification.",
+                "name" : "Industry_aggregation_NZSIOC"
+              }, {
+                "dataType" : {
+                  "type" : "String"
+                },
+                "description" : "Code representing the industry classification according to NZSIOC standards",
+                "name" : "Industry_code_NZSIOC"
+              }, {
+                "dataType" : {
+                  "type" : "String"
+                },
+                "description" : "Name of the industry as per the NZSIOC classification",
+                "name" : "Industry_name_NZSIOC"
+              }, {
+                "dataType" : {
+                  "type" : "String"
+                },
+                "description" : "The measurement units used for the data values",
+                "name" : "Units"
+              }, {
+                "dataType" : {
+                  "type" : "String"
+                },
+                "description" : "Code representing the specific variable being measured",
+                "name" : "Variable_code"
+              }, {
+                "dataType" : {
+                  "type" : "String"
+                },
+                "description" : "Name of the variable being measured in the dataset",
+                "name" : "Variable_name"
+              }, {
+                "dataType" : {
+                  "type" : "String"
+                },
+                "description" : "Category classification of the variable being measured",
+                "name" : "Variable_category"
+              }, {
+                "dataType" : {
+                  "type" : "String"
+                },
+                "description" : "The measured value associated with the industry data",
+                "name" : "Value"
+              }, {
+                "dataType" : {
+                  "type" : "String"
+                },
+                "description" : "The code representing the industry classification according to ANZSIC 2006 standards.",
+                "name" : "Industry_code_ANZSIC06"
+              } ],
+              "providerType" : "arrow"
+            },
+            "separator" : ","
+          }
+        },
+        "properties" : {
+          "filePath" : "/datasets/orchestration_datasets/csv/valid/9MB_annual-enterprise-survey-2023-financial-year-provisional.csv"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "0a48bb57-1edf-490a-a883-7ebec8a026f2",
+          "slug" : "out0",
+          "dataExplorerProps" : {
+            "sorts" : [ ],
+            "filter" : {
+              "type" : "Composite",
+              "op" : {
+                "type" : "AND"
+              },
+              "filters" : [ {
+                "lhs" : {
+                  "type" : "Field",
+                  "value" : "Variable_category"
+                },
+                "type" : "Binary",
+                "op" : "=",
+                "rhs" : {
+                  "type" : "Literal",
+                  "value" : "'Financial performance'"
+                }
+              } ]
+            }
+          }
+        } ]
+      }
+    },
+    "hM_3DdNi-bqq8MhaIN0M7$$r5jocjn56mDoXiPocpU0m" : {
+      "id" : "hM_3DdNi-bqq8MhaIN0M7$$r5jocjn56mDoXiPocpU0m",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "env_uitesting_main_model_databricks_1_1",
+        "x" : 920,
+        "y" : 360
+      },
+      "properties" : {
+        "modelName" : "env_uitesting_main_model_databricks_1"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "9bUwsF7d-ACLOowFhIwLI$$jgu5Szf9W126ohlh1anMR",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "uPesk6KgnrinfnkG-nutq$$0HwNCPb80A3p__aqZomaS",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "p_int",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "p_string",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "c_string",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "c_int",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "c_bigint",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "c_smallint",
+              "dataType" : {
+                "type" : "SmallInt"
+              }
+            }, {
+              "name" : "c_tinyint",
+              "dataType" : {
+                "type" : "TinyInt"
+              }
+            }, {
+              "name" : "c_float",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "c_boolean",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "c_array",
+              "dataType" : {
+                "type" : "Array",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }
+            }, {
+              "name" : "c_double",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "c_struct",
+              "dataType" : {
+                "type" : "Struct",
+                "fields" : [ {
+                  "name" : "city",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "state",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "pin",
+                  "dataType" : {
+                    "type" : "Bigint"
+                  }
+                } ]
+              }
+            }, {
+              "name" : "c_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : true
+      }
+    },
+    "bSp2BAeazUMeXNYr3jMIj$$F2uUDa4J2gWeJ6VJyyG6T" : {
+      "id" : "bSp2BAeazUMeXNYr3jMIj$$F2uUDa4J2gWeJ6VJyyG6T",
+      "component" : "Email",
+      "metadata" : {
+        "label" : "send_danger_email",
+        "x" : 1540,
+        "y" : 180,
+        "comment" : "Sends a cautionary email from a sanity check, including data attachment for parent Databricks project.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "body" : "This is a dangerous email from sanity pipeline for parent databricks project",
+        "subject" : "This is a dangerous email from sanity pipeline for parent databricks project",
+        "includeData" : true,
+        "fileName" : "sanity_parent_sql_databricks",
+        "to" : [ "abhisheks@prophecy.io" ],
+        "bcc" : [ "abhisheks+bcc@prophecy.io" ],
+        "cc" : [ "abhisheks+cc@prophecy.io" ],
+        "connection" : {
+          "kind" : "smtp",
+          "properties" : {
+            "id" : "smtp"
+          },
+          "type" : "connector"
+        },
+        "fileFormat" : "xlsx"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JOXtSL4dHNARGh2BndgWS$$id-YxQ96Saec_RYzWsrGD",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "7p3eDzmf0Fbe6oIbO2AgC$$_L2RSYEWv1Q6StcawUyNF",
+    "source" : "_vSrbpCqSxQ_Qtfm8A80A",
+    "sourcePort" : "0a48bb57-1edf-490a-a883-7ebec8a026f2",
+    "target" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
+    "targetPort" : "sanity_parent_orchestration_pipeline_1__Join_1_in_0"
+  }, {
+    "id" : "icPEC2ohz8kZNfMYNRKyA",
+    "source" : "hM_3DdNi-bqq8MhaIN0M7$$r5jocjn56mDoXiPocpU0m",
+    "sourcePort" : "uPesk6KgnrinfnkG-nutq$$0HwNCPb80A3p__aqZomaS",
+    "target" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
+    "targetPort" : "sanity_parent_orchestration_pipeline_1__Join_1_in_1"
+  }, {
+    "id" : "sBaUctCzzvbc3Re2qZmrc$$mMSVIbjjvye9Nj0dNZkHJ",
+    "source" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
+    "sourcePort" : "sanity_parent_orchestration_pipeline_1__Join_1_out_0",
+    "target" : "bSp2BAeazUMeXNYr3jMIj$$F2uUDa4J2gWeJ6VJyyG6T",
+    "targetPort" : "JOXtSL4dHNARGh2BndgWS$$id-YxQ96Saec_RYzWsrGD"
+  } ],
+  "component" : "Pipeline"
+}

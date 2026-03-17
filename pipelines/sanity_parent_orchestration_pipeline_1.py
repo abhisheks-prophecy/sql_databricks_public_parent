@@ -34,8 +34,7 @@ with Pipeline(args) as pipeline:
           to = ["abhisheks@prophecy.io"],
           bcc = ["abhisheks+bcc@prophecy.io"],
           cc = ["abhisheks+cc@prophecy.io"],
-          connection = "smtp",
-          fileFormat = "xlsx"
+          connection = "smtp"
         ),
         output_ports = None
     )
