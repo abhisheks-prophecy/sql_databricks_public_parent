@@ -503,6 +503,7 @@ Subgraph_1 AS (
   
   final_table AS (
   
+    {#Consolidates unique identifiers from multiple order sources for comprehensive analysis.#}
     SELECT id AS c_id
     
     FROM raw_orders_seed
@@ -797,6 +798,7 @@ DataCleansing_1 AS (
 
 SQLStatement_2 AS (
 
+  {#Identifies records where a specific integer does not match the count of entries in another dataset.#}
   SELECT *
   
   FROM qa_all_not_null_1

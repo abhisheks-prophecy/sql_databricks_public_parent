@@ -23,8 +23,8 @@
       "component" : "SQLStatement",
       "metadata" : {
         "label" : "SQLStatement_2",
-        "x" : 1540,
-        "y" : 80,
+        "x" : 2080,
+        "y" : 220,
         "phase" : 0,
         "macroDependencies" : [ ],
         "comment" : "Identifies records where a specific integer does not match the count of entries in another dataset.",

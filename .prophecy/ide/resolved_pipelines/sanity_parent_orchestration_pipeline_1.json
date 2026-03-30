@@ -15,9 +15,11 @@
       "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
       "Join_1_pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
       "vEkqVS8Z1AmXW7KABrJVw$$pXjeU3HhbDpmJUgANqYTJ" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
+      "Join_2_iOzESJe6r9Cpgr6O49W1z$$AyzKsd-Nf9PzcyUxGBBpV" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_2.sql",
       "SVTxwjzsOk-WJW6HXIFrV$$AQiyLagn_deyQK_qpZXsQ" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
       "mh1Xl4VTWr1LpvUW01mMu$$xKu6DdxJzT6a32GuNlmmN" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
       "m9RlZSSA59AYGHcOZtxpI$$O0r3hyw-0nCleid4yXPYw" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
+      "d_76hUUF1zmsrQKhPa3-P$$defO4RpvzbLhOVFgLR3EZ" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_2.sql",
       "ChOk4BugA7oTy_Cy4iIFX$$Ysy_XjUnCbgHoLvcxZXfQ" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
       "hM_3DdNi-bqq8MhaIN0M7$$r5jocjn56mDoXiPocpU0m" : "models/sanity_parent_orchestration_pipeline_1/env_uitesting_main_model_databricks_1.sql"
     }
@@ -63,8 +65,8 @@
       "kind" : "S3Source",
       "metadata" : {
         "label" : "S3Source_1",
-        "x" : 220,
-        "y" : 180,
+        "x" : 20,
+        "y" : 220,
         "phase" : 0
       },
       "properties" : {
@@ -184,8 +186,8 @@
       "component" : "Model",
       "metadata" : {
         "label" : "env_uitesting_main_model_databricks_1_1",
-        "x" : 920,
-        "y" : 360
+        "x" : 1020,
+        "y" : 420
       },
       "properties" : {
         "modelName" : "env_uitesting_main_model_databricks_1"
@@ -296,8 +298,8 @@
       "component" : "Email",
       "metadata" : {
         "label" : "send_danger_email",
-        "x" : 1540,
-        "y" : 180,
+        "x" : 1420,
+        "y" : 320,
         "comment" : "Sends a cautionary email from a sanity check, including data attachment for parent Databricks project.",
         "autoUpdateComment" : true
       },
