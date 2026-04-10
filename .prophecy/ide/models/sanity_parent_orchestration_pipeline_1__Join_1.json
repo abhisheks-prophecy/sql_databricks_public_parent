@@ -247,7 +247,7 @@
       "component" : "SetOperation",
       "metadata" : {
         "label" : "SetOperation_1",
-        "x" : 820,
+        "x" : 780,
         "y" : 220,
         "phase" : 0
       },
@@ -430,7 +430,7 @@
       "component" : "Aggregate",
       "metadata" : {
         "label" : "Aggregate_1",
-        "x" : 620,
+        "x" : 580,
         "y" : 220,
         "phase" : 0
       },

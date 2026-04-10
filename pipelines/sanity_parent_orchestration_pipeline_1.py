@@ -3,11 +3,6 @@ from prophecy_pipeline_sdk.properties import *
 args = PipelineArgs(label = "sanity_parent_orchestration_pipeline_1", version = 1, auto_layout = False)
 
 with Pipeline(args) as pipeline:
-    sanity_parent_orchestration_pipeline_1__join_1 = Process(
-        name = "sanity_parent_orchestration_pipeline_1__Join_1",
-        properties = ModelTransform(modelName = "sanity_parent_orchestration_pipeline_1__Join_1"),
-        input_ports = ["in_0", "in_1", "in_2"]
-    )
     s3source_1 = Process(
         name = "S3Source_1",
         properties = S3Source(
@@ -24,6 +19,11 @@ with Pipeline(args) as pipeline:
         properties = ModelTransform(modelName = "env_uitesting_main_model_databricks_1"),
         is_custom_output_schema = True
     )
+    sanity_parent_orchestration_pipeline_1__join_1 = Process(
+        name = "sanity_parent_orchestration_pipeline_1__Join_1",
+        properties = ModelTransform(modelName = "sanity_parent_orchestration_pipeline_1__Join_1"),
+        input_ports = ["in_0", "in_1"]
+    )
     send_danger_email = Process(
         name = "send_danger_email",
         properties = Email(
@@ -37,7 +37,8 @@ with Pipeline(args) as pipeline:
           connection = "smtp",
           fileFormat = "xlsx"
         ),
-        output_ports = None
+        output_ports = None,
+        comment = "Sends a cautionary email from a sanity check, including data attachment for parent Databricks project."
     )
     s3source_1 >> sanity_parent_orchestration_pipeline_1__join_1._in(0)
     env_uitesting_main_model_databricks_1_1 >> sanity_parent_orchestration_pipeline_1__join_1._in(1)

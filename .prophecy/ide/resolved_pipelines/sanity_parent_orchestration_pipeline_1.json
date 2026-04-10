@@ -15,11 +15,9 @@
       "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
       "Join_1_pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
       "vEkqVS8Z1AmXW7KABrJVw$$pXjeU3HhbDpmJUgANqYTJ" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
-      "Join_2_iOzESJe6r9Cpgr6O49W1z$$AyzKsd-Nf9PzcyUxGBBpV" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_2.sql",
       "SVTxwjzsOk-WJW6HXIFrV$$AQiyLagn_deyQK_qpZXsQ" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
       "mh1Xl4VTWr1LpvUW01mMu$$xKu6DdxJzT6a32GuNlmmN" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
       "m9RlZSSA59AYGHcOZtxpI$$O0r3hyw-0nCleid4yXPYw" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
-      "d_76hUUF1zmsrQKhPa3-P$$defO4RpvzbLhOVFgLR3EZ" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_2.sql",
       "ChOk4BugA7oTy_Cy4iIFX$$Ysy_XjUnCbgHoLvcxZXfQ" : "models/sanity_parent_orchestration_pipeline_1/sanity_parent_orchestration_pipeline_1__Join_1.sql",
       "hM_3DdNi-bqq8MhaIN0M7$$r5jocjn56mDoXiPocpU0m" : "models/sanity_parent_orchestration_pipeline_1/env_uitesting_main_model_databricks_1.sql"
     }
@@ -36,25 +34,23 @@
         "modelName" : "sanity_parent_orchestration_pipeline_1__Join_1"
       },
       "visualMetaInfo" : {
+        "lastNodeProcessIds" : [ "Join_1_pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH" ],
+        "skipIfZeroRows" : false,
         "visualProcessIds" : [ "Join_1_pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH", "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3", "hM_3DdNi-bqq8MhaIN0M7$$r5jocjn56mDoXiPocpU0m", "mh1Xl4VTWr1LpvUW01mMu$$xKu6DdxJzT6a32GuNlmmN", "vEkqVS8Z1AmXW7KABrJVw$$pXjeU3HhbDpmJUgANqYTJ", "ChOk4BugA7oTy_Cy4iIFX$$Ysy_XjUnCbgHoLvcxZXfQ", "SVTxwjzsOk-WJW6HXIFrV$$AQiyLagn_deyQK_qpZXsQ", "m9RlZSSA59AYGHcOZtxpI$$O0r3hyw-0nCleid4yXPYw", "S3Source_1_0a48bb57-1edf-490a-a883-7ebec8a026f2" ],
         "type" : "ephemeral",
-        "isTemporaryTable" : true,
-        "lastNodeProcessIds" : [ "Join_1_pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH" ]
+        "isTemporaryTable" : true
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "sanity_parent_orchestration_pipeline_1__Join_1_in_0",
+          "id" : "hbC8g47rNx88OHrTIVAF-$$mGhAMktxY-5M3l8aoo0wC",
           "slug" : "in_0"
         }, {
-          "id" : "sanity_parent_orchestration_pipeline_1__Join_1_in_1",
+          "id" : "8-feNove7Bs0VviWp3xX9$$T71qBqKi7bcktRx0Y-Tmb",
           "slug" : "in_1"
-        }, {
-          "id" : "sanity_parent_orchestration_pipeline_1__Join_1_in_2",
-          "slug" : "in_2"
         } ],
         "outputs" : [ {
-          "id" : "sanity_parent_orchestration_pipeline_1__Join_1_out_0",
-          "slug" : "out_0"
+          "id" : "pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH",
+          "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
       }
@@ -335,17 +331,17 @@
     "source" : "_vSrbpCqSxQ_Qtfm8A80A",
     "sourcePort" : "0a48bb57-1edf-490a-a883-7ebec8a026f2",
     "target" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
-    "targetPort" : "sanity_parent_orchestration_pipeline_1__Join_1_in_0"
+    "targetPort" : "hbC8g47rNx88OHrTIVAF-$$mGhAMktxY-5M3l8aoo0wC"
   }, {
     "id" : "icPEC2ohz8kZNfMYNRKyA",
     "source" : "hM_3DdNi-bqq8MhaIN0M7$$r5jocjn56mDoXiPocpU0m",
     "sourcePort" : "uPesk6KgnrinfnkG-nutq$$0HwNCPb80A3p__aqZomaS",
     "target" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
-    "targetPort" : "sanity_parent_orchestration_pipeline_1__Join_1_in_1"
+    "targetPort" : "8-feNove7Bs0VviWp3xX9$$T71qBqKi7bcktRx0Y-Tmb"
   }, {
     "id" : "sBaUctCzzvbc3Re2qZmrc$$mMSVIbjjvye9Nj0dNZkHJ",
     "source" : "jBmcV8hQTaT_ItXBAOitW$$Sbaj4Wq5dDJJRNqFLths3",
-    "sourcePort" : "sanity_parent_orchestration_pipeline_1__Join_1_out_0",
+    "sourcePort" : "pBAG6B4rpqDXJ1-jMk23_$$0Eg0ANSqHqWBpQW2FlPYH",
     "target" : "bSp2BAeazUMeXNYr3jMIj$$F2uUDa4J2gWeJ6VJyyG6T",
     "targetPort" : "JOXtSL4dHNARGh2BndgWS$$id-YxQ96Saec_RYzWsrGD"
   } ],
