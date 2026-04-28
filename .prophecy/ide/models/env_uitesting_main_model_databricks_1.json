@@ -3027,8 +3027,8 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "all_type_partitioned_1",
-        "x" : 940,
-        "y" : -260,
+        "x" : 460,
+        "y" : -80,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
