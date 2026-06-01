@@ -387,12 +387,12 @@
                 "fields" : [ {
                   "name" : "id",
                   "dataType" : {
-                    "type" : "Integer"
+                    "type" : "Bigint"
                   }
                 }, {
                   "name" : "user_id",
                   "dataType" : {
-                    "type" : "Integer"
+                    "type" : "Bigint"
                   }
                 }, {
                   "name" : "order_date",
@@ -668,7 +668,7 @@
                 "fields" : [ {
                   "name" : "c_id",
                   "dataType" : {
-                    "type" : "Integer"
+                    "type" : "Bigint"
                   }
                 } ]
               },
@@ -702,7 +702,7 @@
                 "fields" : [ {
                   "name" : "c_id",
                   "dataType" : {
-                    "type" : "Integer"
+                    "type" : "Bigint"
                   }
                 } ]
               },
@@ -716,7 +716,7 @@
                 "fields" : [ {
                   "name" : "c_id",
                   "dataType" : {
-                    "type" : "Integer"
+                    "type" : "Bigint"
                   }
                 } ]
               },
@@ -753,12 +753,12 @@
                 "fields" : [ {
                   "name" : "id",
                   "dataType" : {
-                    "type" : "Integer"
+                    "type" : "Bigint"
                   }
                 }, {
                   "name" : "user_id",
                   "dataType" : {
-                    "type" : "Integer"
+                    "type" : "Bigint"
                   }
                 }, {
                   "name" : "order_date",
@@ -1491,7 +1491,7 @@
       "metadata" : {
         "label" : "SetOperation_1",
         "slug" : "SetOperation_1",
-        "x" : 800,
+        "x" : 920,
         "y" : 300,
         "phase" : 0,
         "macroDependencies" : [ ]
@@ -2573,12 +2573,12 @@
                 }, {
                   "name" : "id",
                   "dataType" : {
-                    "type" : "Integer"
+                    "type" : "Bigint"
                   }
                 }, {
                   "name" : "user_id",
                   "dataType" : {
-                    "type" : "Integer"
+                    "type" : "Bigint"
                   }
                 }, {
                   "name" : "order_date",
