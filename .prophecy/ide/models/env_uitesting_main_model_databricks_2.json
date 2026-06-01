@@ -112,13 +112,16 @@
         "x" : 80,
         "y" : -180,
         "phase" : 0,
-        "macroDependencies" : [ ]
+        "macroDependencies" : [ ],
+        "comment" : "Makes the results of SQLStatement_1 available for UI testing and validation in the Databricks environment, enabling review and verification of the main test model's outputs.",
+        "autoUpdateComment" : true
       },
       "properties" : {
         "customQueryDisabled" : true,
         "customQuery" : false,
         "incrementalEditorDisabled" : true,
         "query" : "SELECT * \n\nFROM SQLStatement_1\n",
+        "isModel" : true,
         "incrementalKey" : false,
         "incremental" : {
           "expression" : "true"

@@ -95,6 +95,7 @@ SQLStatement_1 AS (
 
 )
 
+{#Makes the results of SQLStatement_1 available for UI testing and validation in the Databricks environment, enabling review and verification of the main test model's outputs.#}
 SELECT *
 
 FROM SQLStatement_1

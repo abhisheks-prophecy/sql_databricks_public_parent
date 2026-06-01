@@ -38,10 +38,10 @@ models:
           type: "Bigint"
   - name: "user_id"
     dataType:
-      type: "Integer"
+      type: "Bigint"
   - name: "id"
     dataType:
-      type: "Integer"
+      type: "Bigint"
   - name: "c_bigint"
     dataType:
       type: "Bigint"
