@@ -768,8 +768,8 @@ DataCleansing_1 AS (
         { "name": "c_struct", "dataType": "Struct" }, 
         { "name": "p_int", "dataType": "Integer" }, 
         { "name": "p_string", "dataType": "String" }, 
-        { "name": "id", "dataType": "Integer" }, 
-        { "name": "user_id", "dataType": "Integer" }, 
+        { "name": "id", "dataType": "Bigint" }, 
+        { "name": "user_id", "dataType": "Bigint" }, 
         { "name": "order_date", "dataType": "Date" }, 
         { "name": "status", "dataType": "String" }, 
         { "name": "root_1_generated", "dataType": "String" }

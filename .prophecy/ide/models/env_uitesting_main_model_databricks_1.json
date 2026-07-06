@@ -1363,6 +1363,38 @@
         "relation_name" : [ "Limit_2" ],
         "columnNames" : "c_string",
         "noOfColumns" : 1,
+        "_oldMacroProperties" : {
+          "macroName" : "TextToColumns",
+          "projectName" : "prophecy_basics",
+          "parameters" : [ {
+            "name" : "relation_name",
+            "value" : "[\"Limit_2\"]"
+          }, {
+            "name" : "columnNames",
+            "value" : "c_string"
+          }, {
+            "name" : "delimiter",
+            "value" : "a"
+          }, {
+            "name" : "split_strategy",
+            "value" : "splitColumns"
+          }, {
+            "name" : "noOfColumns",
+            "value" : "1"
+          }, {
+            "name" : "leaveExtraCharLastCol",
+            "value" : "Leave extra in last column"
+          }, {
+            "name" : "splitColumnPrefix",
+            "value" : "root"
+          }, {
+            "name" : "splitColumnSuffix",
+            "value" : "generated"
+          }, {
+            "name" : "splitRowsColumnName",
+            "value" : "generated_column"
+          } ]
+        },
         "splitColumnSuffix" : "generated",
         "splitRowsColumnName" : "generated_column",
         "leaveExtraCharLastCol" : "Leave extra in last column",
@@ -1408,19 +1440,16 @@
           "projectName" : "prophecy_basics",
           "parameters" : [ {
             "name" : "relation_name",
-            "value" : "['Limit_2']"
+            "value" : "[\"Limit_2\"]"
           }, {
             "name" : "schema",
-            "value" : "[{\"name\": \"c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"c_int\", \"dataType\": \"Integer\"}, {\"name\": \"c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"c_float\", \"dataType\": \"Float\"}, {\"name\": \"c_double\", \"dataType\": \"Double\"}, {\"name\": \"c_string\", \"dataType\": \"String\"}, {\"name\": \"c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"c_array\", \"dataType\": \"Array\"}, {\"name\": \"c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"p_string\", \"dataType\": \"String\"}, {\"name\": \"id\", \"dataType\": \"Integer\"}, {\"name\": \"user_id\", \"dataType\": \"Integer\"}, {\"name\": \"order_date\", \"dataType\": \"Date\"}, {\"name\": \"status\", \"dataType\": \"String\"}]"
+            "value" : "[{\"name\": \"c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"c_int\", \"dataType\": \"Integer\"}, {\"name\": \"c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"c_float\", \"dataType\": \"Float\"}, {\"name\": \"c_double\", \"dataType\": \"Double\"}, {\"name\": \"c_string\", \"dataType\": \"String\"}, {\"name\": \"c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"c_array\", \"dataType\": \"Array\"}, {\"name\": \"c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"p_string\", \"dataType\": \"String\"}, {\"name\": \"id\", \"dataType\": \"Bigint\"}, {\"name\": \"user_id\", \"dataType\": \"Bigint\"}, {\"name\": \"order_date\", \"dataType\": \"Date\"}, {\"name\": \"status\", \"dataType\": \"String\"}]"
           }, {
             "name" : "columnNames",
             "value" : "[\"c_tinyint\", \"c_smallint\", \"c_int\", \"c_bigint\", \"id\", \"user_id\", \"order_date\", \"status\", \"p_string\", \"c_boolean\", \"c_double\", \"c_string\", \"c_float\", \"c_array\", \"c_struct\"]"
           }, {
             "name" : "renameMethod",
             "value" : "editPrefixSuffix"
-          }, {
-            "name" : "editOperation",
-            "value" : "Add"
           }, {
             "name" : "editType",
             "value" : "Prefix"
@@ -1432,9 +1461,8 @@
             "value" : "concat(upper(column_name), '_',column_name)"
           } ]
         },
-        "editOperation" : "Add",
         "editWith" : "pre_",
-        "schema" : "[{\"name\": \"c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"c_int\", \"dataType\": \"Integer\"}, {\"name\": \"c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"c_float\", \"dataType\": \"Float\"}, {\"name\": \"c_double\", \"dataType\": \"Double\"}, {\"name\": \"c_string\", \"dataType\": \"String\"}, {\"name\": \"c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"c_array\", \"dataType\": \"Array\"}, {\"name\": \"c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"p_string\", \"dataType\": \"String\"}, {\"name\": \"id\", \"dataType\": \"Integer\"}, {\"name\": \"user_id\", \"dataType\": \"Integer\"}, {\"name\": \"order_date\", \"dataType\": \"Date\"}, {\"name\": \"status\", \"dataType\": \"String\"}]",
+        "schema" : "[{\"name\": \"c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"c_int\", \"dataType\": \"Integer\"}, {\"name\": \"c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"c_float\", \"dataType\": \"Float\"}, {\"name\": \"c_double\", \"dataType\": \"Double\"}, {\"name\": \"c_string\", \"dataType\": \"String\"}, {\"name\": \"c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"c_array\", \"dataType\": \"Array\"}, {\"name\": \"c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"p_string\", \"dataType\": \"String\"}, {\"name\": \"id\", \"dataType\": \"Bigint\"}, {\"name\": \"user_id\", \"dataType\": \"Bigint\"}, {\"name\": \"order_date\", \"dataType\": \"Date\"}, {\"name\": \"status\", \"dataType\": \"String\"}]",
         "customExpression" : "concat(upper(column_name), '_',column_name)",
         "renameMethod" : "editPrefixSuffix",
         "editType" : "Prefix"
@@ -3101,8 +3129,8 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "Reformat_3",
-        "x" : 1120,
-        "y" : 440,
+        "x" : 1060,
+        "y" : 460,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -3166,39 +3194,13 @@
       "metadata" : {
         "label" : "Transpose_1",
         "slug" : "Transpose_1",
-        "x" : 1380,
-        "y" : 140,
+        "x" : 1500,
+        "y" : 120,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
       "properties" : {
         "relation_name" : [ "MultiColumnRename_1" ],
-        "_oldMacroProperties" : {
-          "macroName" : "Transpose",
-          "projectName" : "prophecy_basics",
-          "parameters" : [ {
-            "name" : "relation_name",
-            "value" : "[\"MultiColumnRename_1\"]"
-          }, {
-            "name" : "schema",
-            "value" : "[{\"name\": \"pre_c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"pre_c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"pre_c_int\", \"dataType\": \"Integer\"}, {\"name\": \"pre_c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"pre_c_float\", \"dataType\": \"Float\"}, {\"name\": \"pre_c_double\", \"dataType\": \"Double\"}, {\"name\": \"pre_c_string\", \"dataType\": \"String\"}, {\"name\": \"pre_c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"pre_c_array\", \"dataType\": \"Array\"}, {\"name\": \"pre_c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"pre_p_string\", \"dataType\": \"String\"}, {\"name\": \"pre_id\", \"dataType\": \"Integer\"}, {\"name\": \"pre_user_id\", \"dataType\": \"Integer\"}, {\"name\": \"pre_order_date\", \"dataType\": \"Date\"}, {\"name\": \"pre_status\", \"dataType\": \"String\"}]"
-          }, {
-            "name" : "nameColumn",
-            "value" : "Name"
-          }, {
-            "name" : "valueColumn",
-            "value" : "Value"
-          }, {
-            "name" : "keyColumns",
-            "value" : "[\"pre_c_int\", \"pre_c_bigint\", \"pre_c_string\", \"pre_c_smallint\", \"pre_c_tinyint\", \"pre_id\"]"
-          }, {
-            "name" : "dataColumns",
-            "value" : "[\"pre_order_date\", \"pre_user_id\", \"pre_p_string\", \"p_int\", \"pre_status\", \"pre_c_struct\", \"pre_c_array\"]"
-          }, {
-            "name" : "customNames",
-            "value" : "false"
-          } ]
-        },
         "dataColumns" : [ "pre_order_date", "pre_user_id", "pre_p_string", "p_int", "pre_status", "pre_c_struct", "pre_c_array" ],
         "customNames" : false,
         "schema" : "[{\"name\": \"pre_c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"pre_c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"pre_c_int\", \"dataType\": \"Integer\"}, {\"name\": \"pre_c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"pre_c_float\", \"dataType\": \"Float\"}, {\"name\": \"pre_c_double\", \"dataType\": \"Double\"}, {\"name\": \"pre_c_string\", \"dataType\": \"String\"}, {\"name\": \"pre_c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"pre_c_array\", \"dataType\": \"Array\"}, {\"name\": \"pre_c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"pre_p_string\", \"dataType\": \"String\"}, {\"name\": \"pre_id\", \"dataType\": \"Integer\"}, {\"name\": \"pre_user_id\", \"dataType\": \"Integer\"}, {\"name\": \"pre_order_date\", \"dataType\": \"Date\"}, {\"name\": \"pre_status\", \"dataType\": \"String\"}]",
@@ -3256,7 +3258,7 @@
             "value" : "[\"TextToColumns_1\"]"
           }, {
             "name" : "schema",
-            "value" : "[{\"name\": \"c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"c_int\", \"dataType\": \"Integer\"}, {\"name\": \"c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"c_float\", \"dataType\": \"Float\"}, {\"name\": \"c_double\", \"dataType\": \"Double\"}, {\"name\": \"c_string\", \"dataType\": \"String\"}, {\"name\": \"c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"c_array\", \"dataType\": \"Array\"}, {\"name\": \"c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"p_string\", \"dataType\": \"String\"}, {\"name\": \"id\", \"dataType\": \"Integer\"}, {\"name\": \"user_id\", \"dataType\": \"Integer\"}, {\"name\": \"order_date\", \"dataType\": \"Date\"}, {\"name\": \"status\", \"dataType\": \"String\"}, {\"name\": \"root_1_generated\", \"dataType\": \"String\"}]"
+            "value" : "[{\"name\": \"c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"c_int\", \"dataType\": \"Integer\"}, {\"name\": \"c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"c_float\", \"dataType\": \"Float\"}, {\"name\": \"c_double\", \"dataType\": \"Double\"}, {\"name\": \"c_string\", \"dataType\": \"String\"}, {\"name\": \"c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"c_array\", \"dataType\": \"Array\"}, {\"name\": \"c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"p_string\", \"dataType\": \"String\"}, {\"name\": \"id\", \"dataType\": \"Bigint\"}, {\"name\": \"user_id\", \"dataType\": \"Bigint\"}, {\"name\": \"order_date\", \"dataType\": \"Date\"}, {\"name\": \"status\", \"dataType\": \"String\"}, {\"name\": \"root_1_generated\", \"dataType\": \"String\"}]"
           }, {
             "name" : "modifyCase",
             "value" : "makeUppercase"
@@ -3311,7 +3313,7 @@
           } ]
         },
         "replaceNullTimeWith" : "1970-01-01 00:00:00.0",
-        "schema" : "[{\"name\": \"c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"c_int\", \"dataType\": \"Integer\"}, {\"name\": \"c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"c_float\", \"dataType\": \"Float\"}, {\"name\": \"c_double\", \"dataType\": \"Double\"}, {\"name\": \"c_string\", \"dataType\": \"String\"}, {\"name\": \"c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"c_array\", \"dataType\": \"Array\"}, {\"name\": \"c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"p_string\", \"dataType\": \"String\"}, {\"name\": \"id\", \"dataType\": \"Integer\"}, {\"name\": \"user_id\", \"dataType\": \"Integer\"}, {\"name\": \"order_date\", \"dataType\": \"Date\"}, {\"name\": \"status\", \"dataType\": \"String\"}, {\"name\": \"root_1_generated\", \"dataType\": \"String\"}]",
+        "schema" : "[{\"name\": \"c_tinyint\", \"dataType\": \"TinyInt\"}, {\"name\": \"c_smallint\", \"dataType\": \"SmallInt\"}, {\"name\": \"c_int\", \"dataType\": \"Integer\"}, {\"name\": \"c_bigint\", \"dataType\": \"Bigint\"}, {\"name\": \"c_float\", \"dataType\": \"Float\"}, {\"name\": \"c_double\", \"dataType\": \"Double\"}, {\"name\": \"c_string\", \"dataType\": \"String\"}, {\"name\": \"c_boolean\", \"dataType\": \"Boolean\"}, {\"name\": \"c_array\", \"dataType\": \"Array\"}, {\"name\": \"c_struct\", \"dataType\": \"Struct\"}, {\"name\": \"p_int\", \"dataType\": \"Integer\"}, {\"name\": \"p_string\", \"dataType\": \"String\"}, {\"name\": \"id\", \"dataType\": \"Bigint\"}, {\"name\": \"user_id\", \"dataType\": \"Bigint\"}, {\"name\": \"order_date\", \"dataType\": \"Date\"}, {\"name\": \"status\", \"dataType\": \"String\"}, {\"name\": \"root_1_generated\", \"dataType\": \"String\"}]",
         "allWhiteSpace" : true,
         "removeTabsLineBreaksAndDuplicateWhitespace" : true,
         "modifyCase" : "makeUppercase",
@@ -3486,12 +3488,6 @@
     "target" : "QFADVQYCvofejUVztLrjL$$1Fdzp5wVvhdBa_Ico22hz",
     "targetPort" : "s4d6ik_b4mPzCfRrA5tm_$$OnTC2kMC6juPN4LaEsq5x"
   }, {
-    "id" : "5wfWw1Lx3vTGXA7Ff-H2V",
-    "source" : "QFADVQYCvofejUVztLrjL$$1Fdzp5wVvhdBa_Ico22hz",
-    "sourcePort" : "-3RkCCu32piQXyco11Hib$$CZRlc3Bl-YEXTsecs3hq-",
-    "target" : "ffQ-SzFaoHzioxNaOnWLs$$FGWN9rEAYSUOGFIMpShaZ",
-    "targetPort" : "wq7tTKd7HFdJqZ_T_JT0p$$TMsws-d54hiAOalO5z1fM"
-  }, {
     "id" : "O0j7vbQGWBcgxjpJNzOlm",
     "source" : "ffQ-SzFaoHzioxNaOnWLs$$FGWN9rEAYSUOGFIMpShaZ",
     "sourcePort" : "vfTvNJuhBM1Pl0KkSybqY$$eRu60fZMOe98dmuQteKdD",
@@ -3515,6 +3511,12 @@
     "sourcePort" : "ruRs7R5GERzvgjZALItjI$$q528S2_9LNXS3hw7mcEdG",
     "target" : "SQLStatement_2##USku5MrB",
     "targetPort" : "TfhrNw9HFHLZ7bvLEB7w6$$L-xFSIpyCaw723IzlIG9Z"
+  }, {
+    "id" : "N3JFIl8uDvt90whPxsmE3",
+    "source" : "QFADVQYCvofejUVztLrjL$$1Fdzp5wVvhdBa_Ico22hz",
+    "sourcePort" : "-3RkCCu32piQXyco11Hib$$CZRlc3Bl-YEXTsecs3hq-",
+    "target" : "ffQ-SzFaoHzioxNaOnWLs$$FGWN9rEAYSUOGFIMpShaZ",
+    "targetPort" : "wq7tTKd7HFdJqZ_T_JT0p$$TMsws-d54hiAOalO5z1fM"
   } ],
   "component" : "Model"
 }

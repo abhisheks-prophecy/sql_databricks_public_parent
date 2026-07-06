@@ -587,6 +587,15 @@ sqlMacros:
     - macros/gems/qa_test_relationship.sql
     - macros/gems/gems.yml
     createdAt: '2023-04-15 08:37:46'
+  .prophecy/metadata/sqlmacros/generate_schema_name:
+    name: generate_schema_name
+    macroType: expression
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generate_schema_name.sql
+    - .prophecy/ide/macros/generate_schema_name.json
+    createdAt: '2026-07-06 12:09:51'
 sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_orders:
     name: raw_orders
