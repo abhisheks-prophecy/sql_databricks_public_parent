@@ -37,7 +37,7 @@ jobs:
   jobs/SQL_DB_Parent_AirflowComposerJob:
     name: SQL_DB_Parent_AirflowComposerJob
     description: ''
-    fabricUID: 24
+    fabricUID: 12073
     scheduler:
       Composer: {}
     cloudProvider: null

@@ -1,4 +1,4 @@
-from staging_abhisheks_e2etests_sql_parentdatabricks_sql_db_parent_airflowcomposerjob.utils import *
+from staging_abhisheks_e2etests_sql_parentdatabricks_sanity_sql_db_parent_airflowcomposerjob.utils import *
 
 def Model_0():
     from airflow.operators.python import PythonOperator
@@ -27,9 +27,11 @@ def Model_0():
           "git_ssh_url": "https://github.com/abhisheks-prophecy/sql_databricks_public_parent",
           "git_sub_path": "",
           "select": "",
+          "threads": "",
           "exclude": "",
-          "run_props": " --profile run_profile",
-          "envs": {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy", "DBT_PROFILES_DIR" : "/home/airflow/gcs/data"}
+          "run_props": "",
+          "envs": {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy"},
+          "project_config": None
         },
         retries = 0
     )
