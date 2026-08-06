@@ -1,6 +1,6 @@
 name: SQL_DatabricksParentProjectMain
 description: ''
-version: 4.2.13-test
+version: 4.2.14-test
 author: abhisheks+e2etests@prophecy.io
 language: sql
 buildSystem: ''
