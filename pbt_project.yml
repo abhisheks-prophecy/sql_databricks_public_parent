@@ -54,7 +54,7 @@ jobs:
       clusterMode:
         Multi: {}
       clusterId: null
-    enabled: false
+    enabled: true
     createdAt: '2024-07-31 11:18:59'
     author: abhisheks+e2etests@prophecy.io
     models: []
