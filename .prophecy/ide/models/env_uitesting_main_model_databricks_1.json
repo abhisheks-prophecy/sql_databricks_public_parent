@@ -65,8 +65,8 @@
       "component" : "TargetModel",
       "metadata" : {
         "label" : "env_uitesting_main_model_databricks_1",
-        "x" : 1800,
-        "y" : 20,
+        "x" : 2040,
+        "y" : -140,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
