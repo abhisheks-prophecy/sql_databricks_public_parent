@@ -83740,7 +83740,8 @@
   "dependenciesContainer" : {
     "dependencies" : { },
     "prophecyProjectDependencies" : {
-      "https://github.com/prophecy-io/prophecy-basics" : "64560"
+      "https://github.com/prophecy-io/prophecy-basics" : "15",
+      "https://github.com/prophecy-io/databricks-sql-spatial" : "14"
     },
     "dependenciesMetadata" : {
       "https://github.com/prophecy-io/prophecy-basics" : {
