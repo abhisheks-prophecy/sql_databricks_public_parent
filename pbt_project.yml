@@ -155,7 +155,7 @@ sqlModels:
               type: Bigint
       - name: c_id
         dataType:
-          type: Integer
+          type: Bigint
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -225,10 +225,10 @@ sqlModels:
           type: String
       - name: id
         dataType:
-          type: Integer
+          type: Bigint
       - name: user_id
         dataType:
-          type: Integer
+          type: Bigint
       - name: order_date
         dataType:
           type: Date
@@ -587,6 +587,15 @@ sqlMacros:
     - macros/gems/qa_test_relationship.sql
     - macros/gems/gems.yml
     createdAt: '2023-04-15 08:37:46'
+  .prophecy/metadata/sqlmacros/generate_schema_name:
+    name: generate_schema_name
+    macroType: expression
+    description: null
+    author: prakharmartand+amgen@prophecy.io
+    files:
+    - macros/generate_schema_name.sql
+    - .prophecy/ide/macros/generate_schema_name.json
+    createdAt: '2026-08-21 14:36:01'
 sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_orders:
     name: raw_orders
@@ -596,10 +605,10 @@ sqlSeeds:
       fields:
       - name: id
         dataType:
-          type: Integer
+          type: Bigint
       - name: user_id
         dataType:
-          type: Integer
+          type: Bigint
       - name: order_date
         dataType:
           type: Date
@@ -619,16 +628,16 @@ sqlSeeds:
       fields:
       - name: id
         dataType:
-          type: Integer
+          type: Bigint
       - name: order_id
         dataType:
-          type: Integer
+          type: Bigint
       - name: payment_method
         dataType:
           type: String
       - name: amount
         dataType:
-          type: Integer
+          type: Bigint
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:

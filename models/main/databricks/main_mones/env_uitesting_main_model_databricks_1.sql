@@ -1,4 +1,58 @@
-WITH all_type_non_partitioned_1 AS (
+WITH my_table2 AS (
+
+  SELECT * 
+  
+  FROM {{ source('alias_spark_catalog_qa_db_warehouse', 'all_type_partitioned') }}
+
+),
+
+my_table1 AS (
+
+  SELECT * 
+  
+  FROM {{ ref('raw_orders')}}
+
+),
+
+my_table2_1 AS (
+
+  SELECT * 
+  
+  FROM {{ source('alias_spark_catalog_qa_db_warehouse', 'all_type_partitioned') }}
+
+),
+
+final_table AS (
+
+  SELECT id AS c_id
+  
+  FROM my_table1
+  
+  UNION
+  
+  SELECT c_tinyint AS c_id
+  
+  FROM my_table2
+  
+  UNION
+  
+  SELECT c_tinyint AS c_id
+  
+  FROM my_table2_1
+
+),
+
+Limit_1 AS (
+
+  SELECT * 
+  
+  FROM final_table AS in0
+  
+  LIMIT 10
+
+),
+
+all_type_non_partitioned_1 AS (
 
   SELECT * 
   
@@ -100,60 +154,6 @@ all_type_partitioned AS (
   SELECT * 
   
   FROM {{ source('alias_spark_catalog_qa_db_warehouse', 'all_type_partitioned') }}
-
-),
-
-my_table2 AS (
-
-  SELECT * 
-  
-  FROM {{ source('alias_spark_catalog_qa_db_warehouse', 'all_type_partitioned') }}
-
-),
-
-my_table1 AS (
-
-  SELECT * 
-  
-  FROM {{ ref('raw_orders')}}
-
-),
-
-my_table2_1 AS (
-
-  SELECT * 
-  
-  FROM {{ source('alias_spark_catalog_qa_db_warehouse', 'all_type_partitioned') }}
-
-),
-
-final_table AS (
-
-  SELECT id AS c_id
-  
-  FROM my_table1
-  
-  UNION
-  
-  SELECT c_tinyint AS c_id
-  
-  FROM my_table2
-  
-  UNION
-  
-  SELECT c_tinyint AS c_id
-  
-  FROM my_table2_1
-
-),
-
-Limit_1 AS (
-
-  SELECT * 
-  
-  FROM final_table AS in0
-  
-  LIMIT 10
 
 ),
 
