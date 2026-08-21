@@ -83740,7 +83740,7 @@
   "dependenciesContainer" : {
     "dependencies" : { },
     "prophecyProjectDependencies" : {
-      "https://github.com/prophecy-io/prophecy-basics" : "64560",
+      "https://github.com/prophecy-io/prophecy-basics" : "15",
       "https://github.com/prophecy-io/prophecy-spatial" : "78643"
     },
     "dependenciesMetadata" : {
@@ -83752,10 +83752,6 @@
       }
     }
   },
-  "entitiesToSync" : [ {
-    "name" : "env_uitesting_main_model_databricks_1",
-    "type" : "Model",
-    "syncedOnce" : true
-  } ],
+  "entitiesToSync" : [ ],
   "frontEndLanguage" : "sql"
 }
