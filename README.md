@@ -77,6 +77,6 @@ v3.1.4.0-1
 
 v3.2.0.0-1
 
-*** Release notes for version: v3.2.0.0-1-staging ***
+*** Release notes for version: v3.2.1.0-1 ***
 
-v3.2.0.0-1-staging
+v3.2.1.0-1

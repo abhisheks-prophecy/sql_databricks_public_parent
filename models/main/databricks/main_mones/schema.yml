@@ -1,56 +1,56 @@
----
 version: 2
+
 models:
-- name: "env_uitesting_main_model_databricks_1"
+- name: env_uitesting_main_model_databricks_1
   columns:
-  - name: "p_int"
+  - name: p_int
     dataType:
-      type: "Integer"
-  - name: "p_string"
+      type: Integer
+  - name: p_string
     dataType:
-      type: "String"
-  - name: "c_string"
+      type: String
+  - name: c_string
     dataType:
-      type: "String"
-  - name: "c_int"
+      type: String
+  - name: c_int
     dataType:
-      type: "Integer"
-  - name: "c_bigint"
+      type: Integer
+  - name: c_bigint
     dataType:
-      type: "Double"
-  - name: "c_smallint"
+      type: Double
+  - name: c_smallint
     dataType:
-      type: "SmallInt"
-  - name: "c_tinyint"
+      type: SmallInt
+  - name: c_tinyint
     dataType:
-      type: "TinyInt"
-  - name: "c_float"
+      type: TinyInt
+  - name: c_float
     dataType:
-      type: "Float"
-  - name: "c_boolean"
+      type: Float
+  - name: c_boolean
     dataType:
-      type: "Boolean"
-  - name: "c_array"
+      type: Boolean
+  - name: c_array
     dataType:
-      type: "Array"
+      type: Array
       dataType:
-        type: "String"
-  - name: "c_double"
+        type: String
+  - name: c_double
     dataType:
-      type: "Float"
-  - name: "c_struct"
+      type: Float
+  - name: c_struct
     dataType:
-      type: "Struct"
+      type: Struct
       fields:
-      - name: "city"
+      - name: city
         dataType:
-          type: "String"
-      - name: "state"
+          type: String
+      - name: state
         dataType:
-          type: "String"
-      - name: "pin"
+          type: String
+      - name: pin
         dataType:
-          type: "Bigint"
-  - name: "c_id"
+          type: Bigint
+  - name: c_id
     dataType:
-      type: "Integer"
+      type: Integer
