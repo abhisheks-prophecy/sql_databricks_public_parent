@@ -62,7 +62,7 @@ jobs:
   jobs/SQL_DB_Parent_AirflowMWAAJob:
     name: SQL_DB_Parent_AirflowMWAAJob
     description: ''
-    fabricUID: 25
+    fabricUID: 12041
     scheduler:
       MWAA: {}
     cloudProvider: null

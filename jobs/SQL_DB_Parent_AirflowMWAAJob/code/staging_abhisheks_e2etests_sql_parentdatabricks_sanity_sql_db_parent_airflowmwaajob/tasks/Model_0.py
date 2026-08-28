@@ -1,4 +1,4 @@
-from staging_abhisheks_e2etests_sql_parentdatabricks_sql_db_parent_airflowmwaajob.utils import *
+from staging_abhisheks_e2etests_sql_parentdatabricks_sanity_sql_db_parent_airflowmwaajob.utils import *
 
 def Model_0():
     from airflow.operators.python import PythonOperator
