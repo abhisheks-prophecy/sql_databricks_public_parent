@@ -1,7 +1,7 @@
 {
   "metainfo" : {
     "type" : "Databricks",
-    "fabricId" : "7",
+    "fabricId" : "12042",
     "jobId" : "jobs/SQL_DB_Parent_DatabricksJob",
     "name" : "SQL_DB_Parent_DatabricksJob",
     "schedule" : "0 0 0 1 1 ? *",
@@ -10,7 +10,7 @@
       "clusterMode" : "Single"
     },
     "enabled" : false,
-    "defaultClusterSize" : "prophecy_internal_jobs",
+    "defaultClusterSize" : "small",
     "alerting" : {
       "emails" : "",
       "onStart" : false,
@@ -70,7 +70,7 @@
         "entityName" : "env_uitesting_main_model_databricks_1",
         "noSendAnonymousUsageStats" : true,
         "profile" : "run_profile",
-        "sqlFabricId" : "7",
+        "sqlFabricId" : "12042",
         "gitEntityValue" : "dev_staging",
         "execDeps" : true,
         "sqlProjectType" : "databricks",
