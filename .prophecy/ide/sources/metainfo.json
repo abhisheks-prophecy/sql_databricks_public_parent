@@ -16,7 +16,10 @@
   },
   "dependenciesContainer" : {
     "dependencies" : { },
-    "prophecyProjectDependencies" : { }
+    "prophecyProjectDependencies" : {
+      "https://github.com/prophecy-io/prophecy-basics" : "64560",
+      "https://github.com/prophecy-io/prophecy-spatial" : "78643"
+    }
   },
   "entitiesToSync" : [ {
     "name" : "env_uitesting_main_model_databricks_1",
