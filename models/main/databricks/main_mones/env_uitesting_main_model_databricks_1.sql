@@ -9,129 +9,11 @@ WITH all_type_non_partitioned AS (
 
 ),
 
-all_type_non_partitioned_1 AS (
-
-  SELECT * 
-  
-  FROM all_type_non_partitioned
-
-),
-
-env_uitesting_main_model_databricks_2 AS (
-
-  SELECT * 
-  
-  FROM {{ ref('env_uitesting_main_model_databricks_2')}}
-
-),
-
-Limit_2 AS (
-
-  SELECT * 
-  
-  FROM env_uitesting_main_model_databricks_2 AS in0
-  
-  LIMIT 10
-
-),
-
 all_type_partitioned AS (
 
   SELECT * 
   
   FROM {{ source('alias_spark_catalog_qa_db_warehouse', 'all_type_partitioned') }}
-
-),
-
-all_type_partitioned_1 AS (
-
-  SELECT * 
-  
-  FROM all_type_partitioned
-
-),
-
-Subgraph_2 AS (
-
-  WITH Join_1_1 AS (
-  
-    {#Combines various data types from different tables to create a comprehensive view for analysis.#}
-    SELECT 
-      in2.p_int AS p_int,
-      all_type_partitioned.p_string AS p_string,
-      all_type_non_partitioned.c_string AS c_string,
-      all_type_non_partitioned.c_int AS c_int,
-      all_type_non_partitioned.c_bigint + spark_catalog.qa_db_warehouse.area(10, 20) AS c_bigint,
-      all_type_non_partitioned.c_smallint AS c_smallint,
-      all_type_non_partitioned.c_tinyint AS c_tinyint,
-      all_type_non_partitioned.c_float AS c_float,
-      all_type_non_partitioned.c_boolean AS c_boolean,
-      all_type_non_partitioned.c_array AS c_array,
-      all_type_non_partitioned.c_double AS c_double,
-      all_type_non_partitioned.c_struct AS c_struct,
-      {{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('all_type_non_partitioned.c_string') }} AS c_base_dependency_macro,
-      {{ SQL_DatabricksParentProjectMain.qa_boolean_macro('all_type_non_partitioned.c_string') }} AS c_current_project_macro,
-      concat('{{ dbt_utils.pretty_time() }}', '{{ dbt_utils.pretty_log_format("my pretty message") }}') AS c_dbt_date
-    
-    FROM all_type_non_partitioned_1 AS all_type_non_partitioned
-    INNER JOIN all_type_partitioned_1 AS all_type_partitioned
-       ON all_type_non_partitioned.c_tinyint = all_type_partitioned.c_tinyint
-      and all_type_non_partitioned.c_smallint = all_type_partitioned.c_smallint
-    INNER JOIN Limit_2 AS in2
-       ON all_type_partitioned.c_tinyint = in2.c_tinyint
-  
-  ),
-  
-  Reformat_2_1 AS (
-  
-    SELECT 
-      p_int AS p_int,
-      p_string AS p_string,
-      c_string AS c_string,
-      c_int AS c_int,
-      c_bigint AS c_bigint,
-      c_smallint AS c_smallint,
-      c_tinyint AS c_tinyint,
-      c_float AS c_float,
-      c_boolean AS c_boolean,
-      c_array AS c_array,
-      c_double AS c_double,
-      c_struct AS c_struct,
-      c_base_dependency_macro AS c_base_dependency_macro,
-      c_current_project_macro AS c_current_project_macro,
-      c_dbt_date AS c_dbt_date
-    
-    FROM Join_1_1 AS in0
-  
-  ),
-  
-  Reformat_1 AS (
-  
-    SELECT 
-      p_int AS p_int,
-      p_string AS p_string,
-      c_string AS c_string,
-      c_int AS c_int,
-      c_bigint AS c_bigint,
-      c_smallint AS c_smallint,
-      c_tinyint AS c_tinyint,
-      c_float AS c_float,
-      c_boolean AS c_boolean,
-      c_array AS c_array,
-      c_double AS c_double,
-      c_struct AS c_struct,
-      c_base_dependency_macro AS c_base_dependency_macro,
-      c_current_project_macro AS c_current_project_macro,
-      c_dbt_date AS c_dbt_date,
-      c_struct.city AS city
-    
-    FROM Reformat_2_1 AS in0
-  
-  )
-  
-  SELECT * 
-  
-  FROM Reformat_1
 
 ),
 
@@ -504,6 +386,7 @@ Subgraph_1 AS (
   final_table AS (
   
     {#Consolidates unique identifiers from multiple order sources for comprehensive analysis.#}
+    {#Consolidates unique identifiers from multiple order sources for comprehensive analysis.#}
     SELECT id AS c_id
     
     FROM raw_orders_seed
@@ -607,11 +490,129 @@ Join_1 AS (
 
 ),
 
+all_type_non_partitioned_1 AS (
+
+  SELECT * 
+  
+  FROM all_type_non_partitioned
+
+),
+
+env_uitesting_main_model_databricks_2 AS (
+
+  SELECT * 
+  
+  FROM {{ ref('env_uitesting_main_model_databricks_2')}}
+
+),
+
+Limit_2 AS (
+
+  SELECT * 
+  
+  FROM env_uitesting_main_model_databricks_2 AS in0
+  
+  LIMIT 10
+
+),
+
+all_type_partitioned_1 AS (
+
+  SELECT * 
+  
+  FROM all_type_partitioned
+
+),
+
+Subgraph_2 AS (
+
+  WITH Join_1_1 AS (
+  
+    {#Combines various data types from different tables to create a comprehensive view for analysis.#}
+    SELECT 
+      in2.p_int AS p_int,
+      all_type_partitioned.p_string AS p_string,
+      all_type_non_partitioned.c_string AS c_string,
+      all_type_non_partitioned.c_int AS c_int,
+      all_type_non_partitioned.c_bigint + spark_catalog.qa_db_warehouse.area(10, 20) AS c_bigint,
+      all_type_non_partitioned.c_smallint AS c_smallint,
+      all_type_non_partitioned.c_tinyint AS c_tinyint,
+      all_type_non_partitioned.c_float AS c_float,
+      all_type_non_partitioned.c_boolean AS c_boolean,
+      all_type_non_partitioned.c_array AS c_array,
+      all_type_non_partitioned.c_double AS c_double,
+      all_type_non_partitioned.c_struct AS c_struct,
+      {{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('all_type_non_partitioned.c_string') }} AS c_base_dependency_macro,
+      {{ SQL_DatabricksParentProjectMain.qa_boolean_macro('all_type_non_partitioned.c_string') }} AS c_current_project_macro,
+      concat('{{ dbt_utils.pretty_time() }}', '{{ dbt_utils.pretty_log_format("my pretty message") }}') AS c_dbt_date
+    
+    FROM all_type_non_partitioned_1 AS all_type_non_partitioned
+    INNER JOIN all_type_partitioned_1 AS all_type_partitioned
+       ON all_type_non_partitioned.c_tinyint = all_type_partitioned.c_tinyint
+      and all_type_non_partitioned.c_smallint = all_type_partitioned.c_smallint
+    INNER JOIN Limit_2 AS in2
+       ON all_type_partitioned.c_tinyint = in2.c_tinyint
+  
+  ),
+  
+  Reformat_2_1 AS (
+  
+    SELECT 
+      p_int AS p_int,
+      p_string AS p_string,
+      c_string AS c_string,
+      c_int AS c_int,
+      c_bigint AS c_bigint,
+      c_smallint AS c_smallint,
+      c_tinyint AS c_tinyint,
+      c_float AS c_float,
+      c_boolean AS c_boolean,
+      c_array AS c_array,
+      c_double AS c_double,
+      c_struct AS c_struct,
+      c_base_dependency_macro AS c_base_dependency_macro,
+      c_current_project_macro AS c_current_project_macro,
+      c_dbt_date AS c_dbt_date
+    
+    FROM Join_1_1 AS in0
+  
+  ),
+  
+  Reformat_1 AS (
+  
+    SELECT 
+      p_int AS p_int,
+      p_string AS p_string,
+      c_string AS c_string,
+      c_int AS c_int,
+      c_bigint AS c_bigint,
+      c_smallint AS c_smallint,
+      c_tinyint AS c_tinyint,
+      c_float AS c_float,
+      c_boolean AS c_boolean,
+      c_array AS c_array,
+      c_double AS c_double,
+      c_struct AS c_struct,
+      c_base_dependency_macro AS c_base_dependency_macro,
+      c_current_project_macro AS c_current_project_macro,
+      c_dbt_date AS c_dbt_date,
+      c_struct.city AS city
+    
+    FROM Reformat_2_1 AS in0
+  
+  )
+  
+  SELECT * 
+  
+  FROM Reformat_1
+
+),
+
 Reformat_3 AS (
 
   SELECT * 
   
-  FROM Join_1 AS in0
+  FROM Join_1
 
 ),
 
@@ -619,14 +620,20 @@ Reformat_4 AS (
 
   SELECT * 
   
-  FROM Reformat_3 AS in0
+  FROM Reformat_3
 
 ),
 
 parent_transform_deduplicate_1 AS (
 
   {#Streamlines and removes duplicates from a dataset for improved data quality.#}
-  {{ SQL_DatabricksParentProjectMain.parent_transform_deduplicate('Reformat_4', 'p_int', 'c_int') }}
+  {{
+    SQL_DatabricksParentProjectMain.parent_transform_deduplicate(
+      relation = 'Reformat_4', 
+      partition_by = 'p_int', 
+      order_by = 'c_int'
+    )
+  }}
 
 ),
 
@@ -646,8 +653,8 @@ MultiColumnRename_1 AS (
 
   {{
     prophecy_basics.MultiColumnRename(
-      ['Limit_2'], 
-      [
+      relation_name = ['Limit_2'], 
+      columnNames = [
         'c_tinyint', 
         'c_smallint', 
         'c_int', 
@@ -664,8 +671,8 @@ MultiColumnRename_1 AS (
         'c_array', 
         'c_struct'
       ], 
-      'editPrefixSuffix', 
-      [
+      renameMethod = 'editPrefixSuffix', 
+      schema = [
         'c_tinyint', 
         'c_smallint', 
         'c_int', 
@@ -683,9 +690,9 @@ MultiColumnRename_1 AS (
         'order_date', 
         'status'
       ], 
-      'Prefix', 
-      'pre_', 
-      "concat(upper(column_name), '_',column_name)"
+      editType = 'Prefix', 
+      editWith = 'pre_', 
+      customExpression = "concat(upper(column_name), '_',column_name)"
     )
   }}
 
@@ -695,9 +702,16 @@ Transpose_1 AS (
 
   {{
     prophecy_basics.Transpose(
-      ['MultiColumnRename_1'], 
-      ['pre_c_int', 'pre_c_bigint', 'pre_c_string', 'pre_c_smallint', 'pre_c_tinyint', 'pre_id'], 
-      [
+      relation_name = ['MultiColumnRename_1'], 
+      keyColumns = [
+        'pre_c_int', 
+        'pre_c_bigint', 
+        'pre_c_string', 
+        'pre_c_smallint', 
+        'pre_c_tinyint', 
+        'pre_id'
+      ], 
+      dataColumns = [
         'pre_order_date', 
         'pre_user_id', 
         'pre_p_string', 
@@ -706,9 +720,9 @@ Transpose_1 AS (
         'pre_c_struct', 
         'pre_c_array'
       ], 
-      'Name', 
-      'Value', 
-      [
+      nameColumn = 'Name', 
+      valueColumn = 'Value', 
+      schema = [
         'pre_c_tinyint', 
         'pre_c_smallint', 
         'pre_c_int', 
@@ -726,7 +740,7 @@ Transpose_1 AS (
         'pre_order_date', 
         'pre_status'
       ], 
-      false
+      customNames = false
     )
   }}
 
@@ -736,15 +750,15 @@ TextToColumns_1 AS (
 
   {{
     prophecy_basics.TextToColumns(
-      ['Limit_2'], 
-      'c_string', 
-      "a", 
-      'splitColumns', 
-      1, 
-      'Leave extra in last column', 
-      'root', 
-      'generated', 
-      'generated_column'
+      relation_name = ['Limit_2'], 
+      columnNames = 'c_string', 
+      delimiter = "a", 
+      split_strategy = 'splitColumns', 
+      noOfColumns = 1, 
+      leaveExtraCharLastCol = 'Leave extra in last column', 
+      splitColumnPrefix = 'root', 
+      splitColumnSuffix = 'generated', 
+      splitRowsColumnName = 'generated_column'
     )
   }}
 
@@ -754,8 +768,8 @@ DataCleansing_1 AS (
 
   {{
     prophecy_basics.DataCleansing(
-      ['TextToColumns_1'], 
-      [
+      relation_name = ['TextToColumns_1'], 
+      schema = [
         { "name": "c_tinyint", "dataType": "TinyInt" }, 
         { "name": "c_smallint", "dataType": "SmallInt" }, 
         { "name": "c_int", "dataType": "Integer" }, 
@@ -774,23 +788,32 @@ DataCleansing_1 AS (
         { "name": "status", "dataType": "String" }, 
         { "name": "root_1_generated", "dataType": "String" }
       ], 
-      'makeUppercase', 
-      ['c_tinyint', 'c_smallint', 'c_int', 'c_boolean', 'c_string', 'p_string', 'order_date', 'id'], 
-      true, 
-      'NA', 
-      true, 
-      0, 
-      true, 
-      true, 
-      true, 
-      true, 
-      true, 
-      true, 
-      true, 
-      false, 
-      '1970-01-01', 
-      false, 
-      '1970-01-01 00:00:00.0'
+      modifyCase = 'makeUppercase', 
+      columnNames = [
+        'c_tinyint', 
+        'c_smallint', 
+        'c_int', 
+        'c_boolean', 
+        'c_string', 
+        'p_string', 
+        'order_date', 
+        'id'
+      ], 
+      replaceNullTextFields = true, 
+      replaceNullTextWith = 'NA', 
+      replaceNullForNumericFields = true, 
+      replaceNullNumericWith = 0, 
+      trimWhiteSpace = true, 
+      removeTabsLineBreaksAndDuplicateWhitespace = true, 
+      allWhiteSpace = true, 
+      cleanLetters = true, 
+      cleanPunctuations = true, 
+      cleanNumbers = true, 
+      removeRowNullAllCols = true, 
+      replaceNullDateFields = false, 
+      replaceNullDateWith = '1970-01-01', 
+      replaceNullTimeFields = false, 
+      replaceNullTimeWith = '1970-01-01 00:00:00.0'
     )
   }}
 
