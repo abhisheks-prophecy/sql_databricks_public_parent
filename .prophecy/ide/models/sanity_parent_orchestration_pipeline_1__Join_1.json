@@ -279,7 +279,7 @@
       "metadata" : {
         "label" : "industry_data_by_year",
         "x" : 420,
-        "y" : 220,
+        "y" : -80,
         "phase" : 0
       },
       "properties" : {
