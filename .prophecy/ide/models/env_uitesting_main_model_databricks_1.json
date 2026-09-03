@@ -23,9 +23,10 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "Reformat_4",
-        "x" : 1280,
+        "x" : 1500,
         "y" : 60,
         "phase" : 0,
+        "macroDependencies" : [ ],
         "isLabelGrayed" : false
       },
       "properties" : {
@@ -43,8 +44,7 @@
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
-      },
-      "index" : 13
+      }
     },
     "env_uitesting_ma##d1IKN6KZ" : {
       "id" : "env_uitesting_ma##d1IKN6KZ",
@@ -78,8 +78,8 @@
       "component" : "Join",
       "metadata" : {
         "label" : "Join_1",
-        "x" : 880,
-        "y" : 60,
+        "x" : 1000,
+        "y" : -240,
         "phase" : 0,
         "macroDependencies" : [ ],
         "comment" : "asd\n  asdasddasd",
@@ -179,7 +179,7 @@
           "_row_id" : "294473078"
         } ],
         "activeTab" : "conditions",
-        "columnsSelector" : [ ],
+        "columnsSelector" : [ "YeTnmWza##c_tinyint", "CFmTNXFc##c_tinyint", "YeTnmWza##c_smallint", "CFmTNXFc##c_smallint", "CFmTNXFc##c_int", "ZEIbUcT3##c_id", "CFmTNXFc##p_int", "CFmTNXFc##p_string", "YeTnmWza##c_string", "YeTnmWza##c_int", "YeTnmWza##c_bigint", "YeTnmWza##c_smallint", "YeTnmWza##c_tinyint", "YeTnmWza##c_float", "YeTnmWza##c_boolean", "YeTnmWza##c_array", "YeTnmWza##c_double", "YeTnmWza##c_struct", "ZEIbUcT3##c_id" ],
         "headAlias" : "all_type_non_partitioned"
       },
       "ports" : {
@@ -2781,14 +2781,14 @@
       "metadata" : {
         "label" : "OrderBy_1",
         "x" : 420,
-        "y" : 20,
+        "y" : -120,
         "phase" : 0,
         "macroDependencies" : [ ],
         "comment" : "Sorts filtered data by various criteria to prioritize specific records.",
         "isLabelGrayed" : false
       },
       "properties" : {
-        "columnsSelector" : [ ],
+        "columnsSelector" : [ "RfU6D6Jy##c_tinyint", "RfU6D6Jy##c_smallint", "RfU6D6Jy##c_double" ],
         "orders" : [ {
           "expression" : {
             "expression" : "c_tinyint"
@@ -2819,8 +2819,7 @@
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
-      },
-      "index" : 9
+      }
     },
     "final##L4trzgKi" : {
       "id" : "final##L4trzgKi",
@@ -2904,9 +2903,10 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "Reformat_3",
-        "x" : 1080,
+        "x" : 1260,
         "y" : 60,
         "phase" : 0,
+        "macroDependencies" : [ ],
         "isLabelGrayed" : false
       },
       "properties" : {
@@ -2924,8 +2924,7 @@
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
-      },
-      "index" : 12
+      }
     },
     "all_type_partiti##iiNnQagY" : {
       "id" : "all_type_partiti##iiNnQagY",
@@ -2960,8 +2959,8 @@
       "component" : "Macro",
       "metadata" : {
         "label" : "parent_transform_deduplicate_1",
-        "x" : 1480,
-        "y" : 60,
+        "x" : 1700,
+        "y" : -240,
         "phase" : 0,
         "macroDependencies" : [ "SQL_DatabricksParentProjectMain.parent_transform_deduplicate" ],
         "comment" : "Streamlines and removes duplicates from a dataset for improved data quality.",
@@ -2992,8 +2991,35 @@
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
+      }
+    },
+    "aTsVR4Z_wgW3cDzGfG1q9" : {
+      "id" : "aTsVR4Z_wgW3cDzGfG1q9",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_with_only_seed_base",
+        "slug" : "model_with_only_seed_base",
+        "x" : 0,
+        "y" : -140,
+        "phase" : 0
       },
-      "index" : 14
+      "properties" : {
+        "table" : {
+          "name" : "model_with_only_seed_base",
+          "sourceType" : "Model",
+          "sourceName" : "",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "OSJLxBsWvhUbcNbK11sYU",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
     },
     "MultiColumnRenam##Z3reKLiu" : {
       "id" : "MultiColumnRenam##Z3reKLiu",
@@ -3051,8 +3077,8 @@
       "component" : "Macro",
       "metadata" : {
         "label" : "qa_all_not_null_1",
-        "x" : 1680,
-        "y" : 60,
+        "x" : 1940,
+        "y" : -240,
         "phase" : 0,
         "macroDependencies" : [ "SQL_DatabricksParentProjectMain.qa_all_not_null" ],
         "comment" : "Ensures data integrity by checking for non-null values in a specific column of a dataset.",
@@ -3080,16 +3106,15 @@
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
-      },
-      "index" : 15
+      }
     },
     "SetOperation_1##nztVv1Xw" : {
       "id" : "SetOperation_1##nztVv1Xw",
       "component" : "Union",
       "metadata" : {
         "label" : "SetOperation_1",
-        "x" : 620,
-        "y" : 20,
+        "x" : 660,
+        "y" : -140,
         "phase" : 0,
         "isLabelGrayed" : false
       },
@@ -3113,8 +3138,7 @@
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
-      },
-      "index" : 10
+      }
     },
     "DataCleansing_1##Cg5o09cS" : {
       "id" : "DataCleansing_1##Cg5o09cS",

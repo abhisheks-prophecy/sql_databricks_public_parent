@@ -17,6 +17,41 @@ all_type_partitioned AS (
 
 ),
 
+Filter_1asd AS (
+
+  SELECT * 
+  
+  FROM all_type_partitioned AS in0
+  
+  WHERE true
+
+),
+
+OrderBy_1 AS (
+
+  {#Sorts filtered data by various criteria to prioritize specific records.#}
+  SELECT * 
+  
+  FROM Filter_1asd AS in0
+  
+  ORDER BY c_tinyint ASC NULLS FIRST, c_smallint DESC NULLS LAST, c_double ASC
+
+),
+
+SetOperation_1 AS (
+
+  SELECT * 
+  
+  FROM OrderBy_1 AS in0
+  
+  UNION
+  
+  SELECT * 
+  
+  FROM OrderBy_1 AS in1
+
+),
+
 Subgraph_1 AS (
 
   WITH my_table2_1 AS (
@@ -427,41 +462,6 @@ Subgraph_1 AS (
 
 ),
 
-Filter_1asd AS (
-
-  SELECT * 
-  
-  FROM all_type_partitioned AS in0
-  
-  WHERE true
-
-),
-
-OrderBy_1 AS (
-
-  {#Sorts filtered data by various criteria to prioritize specific records.#}
-  SELECT * 
-  
-  FROM Filter_1asd AS in0
-  
-  ORDER BY c_tinyint ASC NULLS FIRST, c_smallint DESC NULLS LAST, c_double ASC
-
-),
-
-SetOperation_1 AS (
-
-  SELECT * 
-  
-  FROM OrderBy_1 AS in0
-  
-  UNION
-  
-  SELECT * 
-  
-  FROM OrderBy_1 AS in1
-
-),
-
 Join_1 AS (
 
   {#asd
@@ -487,6 +487,43 @@ Join_1 AS (
     and all_type_non_partitioned.c_smallint = all_type_partitioned.c_smallint
   LEFT JOIN Subgraph_1 AS in2
      ON all_type_partitioned.c_int != in2.c_id
+
+),
+
+Reformat_3 AS (
+
+  SELECT * 
+  
+  FROM Join_1
+
+),
+
+Reformat_4 AS (
+
+  SELECT * 
+  
+  FROM Reformat_3
+
+),
+
+parent_transform_deduplicate_1 AS (
+
+  {#Streamlines and removes duplicates from a dataset for improved data quality.#}
+  {{
+    SQL_DatabricksParentProjectMain.parent_transform_deduplicate(
+      relation = 'Reformat_4', 
+      partition_by = 'p_int', 
+      order_by = 'c_int'
+    )
+  }}
+
+),
+
+model_with_only_seed_base AS (
+
+  SELECT * 
+  
+  FROM {{ ref('model_with_only_seed_base')}}
 
 ),
 
@@ -605,35 +642,6 @@ Subgraph_2 AS (
   SELECT * 
   
   FROM Reformat_1
-
-),
-
-Reformat_3 AS (
-
-  SELECT * 
-  
-  FROM Join_1
-
-),
-
-Reformat_4 AS (
-
-  SELECT * 
-  
-  FROM Reformat_3
-
-),
-
-parent_transform_deduplicate_1 AS (
-
-  {#Streamlines and removes duplicates from a dataset for improved data quality.#}
-  {{
-    SQL_DatabricksParentProjectMain.parent_transform_deduplicate(
-      relation = 'Reformat_4', 
-      partition_by = 'p_int', 
-      order_by = 'c_int'
-    )
-  }}
 
 ),
 
