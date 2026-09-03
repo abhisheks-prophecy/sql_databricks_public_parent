@@ -2903,8 +2903,8 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "Reformat_3",
-        "x" : 1260,
-        "y" : 60,
+        "x" : 1280,
+        "y" : -60,
         "phase" : 0,
         "macroDependencies" : [ ],
         "isLabelGrayed" : false
