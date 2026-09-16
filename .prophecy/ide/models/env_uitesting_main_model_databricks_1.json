@@ -206,8 +206,8 @@
       "component" : "Macro",
       "metadata" : {
         "label" : "TextToColumns_1",
-        "x" : 1480,
-        "y" : 700,
+        "x" : 1520,
+        "y" : 780,
         "phase" : 0,
         "macroDependencies" : [ "prophecy_basics.TextToColumns" ],
         "isLabelGrayed" : false
@@ -264,7 +264,7 @@
       "metadata" : {
         "label" : "Filter_1asd",
         "x" : 220,
-        "y" : 20,
+        "y" : -120,
         "phase" : 0,
         "macroDependencies" : [ ],
         "isLabelGrayed" : false
@@ -323,8 +323,8 @@
       "component" : "Source",
       "metadata" : {
         "label" : "all_type_non_partitioned",
-        "x" : 620,
-        "y" : 220,
+        "x" : 660,
+        "y" : 80,
         "phase" : 0,
         "isLabelGrayed" : false
       },
@@ -351,8 +351,8 @@
       "component" : "Subgraph",
       "metadata" : {
         "label" : "Subgraph_1",
-        "x" : 220,
-        "y" : 300,
+        "x" : 320,
+        "y" : 80,
         "phase" : 0
       },
       "processes" : {
@@ -2780,8 +2780,8 @@
       "component" : "OrderBy",
       "metadata" : {
         "label" : "OrderBy_1",
-        "x" : 420,
-        "y" : -120,
+        "x" : 380,
+        "y" : -400,
         "phase" : 0,
         "macroDependencies" : [ ],
         "comment" : "Sorts filtered data by various criteria to prioritize specific records.",
@@ -2861,9 +2861,10 @@
       "component" : "SQLStatement",
       "metadata" : {
         "label" : "SQLStatement_2",
-        "x" : 2000,
-        "y" : 540,
+        "x" : 2040,
+        "y" : 620,
         "phase" : 0,
+        "macroDependencies" : [ ],
         "comment" : "Identifies records where a specific integer does not match the count of entries in another dataset.",
         "isLabelGrayed" : false
       },
@@ -2931,9 +2932,10 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "all_type_partitioned_1",
-        "x" : 420,
-        "y" : 360,
+        "x" : 340,
+        "y" : 440,
         "phase" : 0,
+        "macroDependencies" : [ ],
         "isLabelGrayed" : false
       },
       "properties" : {
@@ -3026,8 +3028,8 @@
       "component" : "Macro",
       "metadata" : {
         "label" : "MultiColumnRename_1",
-        "x" : 1480,
-        "y" : 500,
+        "x" : 1520,
+        "y" : 580,
         "phase" : 0,
         "macroDependencies" : [ "prophecy_basics.MultiColumnRename" ],
         "isLabelGrayed" : false
@@ -3113,8 +3115,8 @@
       "component" : "Union",
       "metadata" : {
         "label" : "SetOperation_1",
-        "x" : 660,
-        "y" : -140,
+        "x" : 920,
+        "y" : -660,
         "phase" : 0,
         "isLabelGrayed" : false
       },
@@ -3145,8 +3147,8 @@
       "component" : "Macro",
       "metadata" : {
         "label" : "DataCleansing_1",
-        "x" : 1680,
-        "y" : 700,
+        "x" : 1720,
+        "y" : 780,
         "phase" : 0,
         "macroDependencies" : [ "prophecy_basics.DataCleansing" ],
         "isLabelGrayed" : false
@@ -3260,8 +3262,8 @@
       "component" : "Macro",
       "metadata" : {
         "label" : "Transpose_1",
-        "x" : 1680,
-        "y" : 500,
+        "x" : 1720,
+        "y" : 580,
         "phase" : 0,
         "macroDependencies" : [ "prophecy_basics.Transpose" ],
         "isLabelGrayed" : false

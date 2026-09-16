@@ -527,6 +527,18 @@ model_with_only_seed_base AS (
 
 ),
 
+qa_all_not_null_1 AS (
+
+  {#Ensures data integrity by checking for non-null values in a specific column of a dataset.#}
+  {{
+    SQL_DatabricksParentProjectMain.qa_all_not_null(
+      model = 'parent_transform_deduplicate_1', 
+      column_name = 'p_string'
+    )
+  }}
+
+),
+
 all_type_non_partitioned_1 AS (
 
   SELECT * 
@@ -642,18 +654,6 @@ Subgraph_2 AS (
   SELECT * 
   
   FROM Reformat_1
-
-),
-
-qa_all_not_null_1 AS (
-
-  {#Ensures data integrity by checking for non-null values in a specific column of a dataset.#}
-  {{
-    SQL_DatabricksParentProjectMain.qa_all_not_null(
-      model = 'parent_transform_deduplicate_1', 
-      column_name = 'p_string'
-    )
-  }}
 
 ),
 
